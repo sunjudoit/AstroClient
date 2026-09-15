@@ -1,0 +1,16 @@
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.exe
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.deps.json
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.runtimeconfig.json
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.dll
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.pdb
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.Form1.resources
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.csproj.GenerateResource.cache
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.AssemblyInfoInputs.cache
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.AssemblyInfo.cs
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.csproj.CoreCompileInputs.cache
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.dll
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\refint\AstroClient.dll
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.pdb
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.genruntimeconfig.cache
+C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\ref\AstroClient.dll
