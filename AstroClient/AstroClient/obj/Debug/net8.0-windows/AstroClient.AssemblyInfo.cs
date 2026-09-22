@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AstroClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+801750dae68c1eb10b412e82fae430e68ea6130e")]
 [assembly: System.Reflection.AssemblyProductAttribute("AstroClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AstroClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,3 +14,20 @@ C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\
 C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.pdb
 C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.genruntimeconfig.cache
 C:\Users\P305532\Documents\GitHub\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\ref\AstroClient.dll
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.exe
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.deps.json
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.runtimeconfig.json
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.dll
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.pdb
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.Form1.resources
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.csproj.GenerateResource.cache
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.AssemblyInfoInputs.cache
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.AssemblyInfo.cs
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.csproj.CoreCompileInputs.cache
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.sourcelink.json
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.dll
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\refint\AstroClient.dll
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.pdb
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.genruntimeconfig.cache
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\ref\AstroClient.dll

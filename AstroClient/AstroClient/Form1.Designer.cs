@@ -67,10 +67,10 @@
             btnColor = new Button();
             btnFont = new Button();
             label20 = new Label();
-            pictureBox1 = new PictureBox();
-            label21 = new Label();
+            picFlag = new PictureBox();
+            lblServerStatus = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvHistory).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picFlag).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -85,35 +85,35 @@
             // 
             // label6
             // 
-            label6.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(87, 122);
+            label6.Font = new Font("Gadugi", 9.75F, FontStyle.Bold);
+            label6.Location = new Point(87, 126);
             label6.Name = "label6";
-            label6.Size = new Size(75, 23);
+            label6.Size = new Size(96, 23);
             label6.TabIndex = 11;
             label6.Text = "Star Velocity";
             // 
             // label7
             // 
-            label7.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(320, 122);
+            label7.Font = new Font("Gadugi", 9.75F, FontStyle.Bold);
+            label7.Location = new Point(299, 127);
             label7.Name = "label7";
-            label7.Size = new Size(75, 23);
+            label7.Size = new Size(113, 23);
             label7.TabIndex = 12;
             label7.Text = "Star Distance";
             // 
             // label8
             // 
-            label8.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(504, 122);
+            label8.Font = new Font("Gadugi", 9.75F, FontStyle.Bold);
+            label8.Location = new Point(495, 127);
             label8.Name = "label8";
-            label8.Size = new Size(140, 23);
+            label8.Size = new Size(164, 23);
             label8.TabIndex = 13;
             label8.Text = "Temperature Conversion";
             // 
             // label9
             // 
-            label9.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(739, 122);
+            label9.Font = new Font("Gadugi", 9.75F, FontStyle.Bold);
+            label9.Location = new Point(739, 127);
             label9.Name = "label9";
             label9.Size = new Size(104, 23);
             label9.TabIndex = 14;
@@ -121,30 +121,31 @@
             // 
             // txtVelocityResult
             // 
-            txtVelocityResult.Location = new Point(50, 277);
+            txtVelocityResult.Location = new Point(50, 284);
             txtVelocityResult.Name = "txtVelocityResult";
             txtVelocityResult.Size = new Size(167, 22);
             txtVelocityResult.TabIndex = 17;
             // 
             // btnVelocity
             // 
-            btnVelocity.Location = new Point(48, 228);
+            btnVelocity.BackColor = SystemColors.Info;
+            btnVelocity.Location = new Point(48, 235);
             btnVelocity.Name = "btnVelocity";
             btnVelocity.Size = new Size(169, 25);
             btnVelocity.TabIndex = 18;
             btnVelocity.Text = "Calulate Velocity";
-            btnVelocity.UseVisualStyleBackColor = true;
+            btnVelocity.UseVisualStyleBackColor = false;
             // 
             // txtObservedWavelength
             // 
-            txtObservedWavelength.Location = new Point(49, 157);
+            txtObservedWavelength.Location = new Point(49, 166);
             txtObservedWavelength.Name = "txtObservedWavelength";
             txtObservedWavelength.Size = new Size(164, 22);
             txtObservedWavelength.TabIndex = 19;
             // 
             // txtRestWavelength
             // 
-            txtRestWavelength.Location = new Point(50, 200);
+            txtRestWavelength.Location = new Point(50, 207);
             txtRestWavelength.Name = "txtRestWavelength";
             txtRestWavelength.Size = new Size(164, 22);
             txtRestWavelength.TabIndex = 20;
@@ -153,7 +154,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(52, 140);
+            label10.Location = new Point(52, 149);
             label10.Name = "label10";
             label10.Size = new Size(142, 15);
             label10.TabIndex = 21;
@@ -163,7 +164,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(53, 182);
+            label11.Location = new Point(53, 189);
             label11.Name = "label11";
             label11.Size = new Size(116, 15);
             label11.TabIndex = 22;
@@ -173,7 +174,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(50, 259);
+            label12.Location = new Point(50, 266);
             label12.Name = "label12";
             label12.Size = new Size(71, 15);
             label12.TabIndex = 23;
@@ -183,7 +184,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.Location = new Point(272, 140);
+            label13.Location = new Point(272, 149);
             label13.Name = "label13";
             label13.Size = new Size(121, 15);
             label13.TabIndex = 25;
@@ -191,7 +192,7 @@
             // 
             // txtParallaxAngle
             // 
-            txtParallaxAngle.Location = new Point(269, 157);
+            txtParallaxAngle.Location = new Point(269, 166);
             txtParallaxAngle.Name = "txtParallaxAngle";
             txtParallaxAngle.Size = new Size(164, 22);
             txtParallaxAngle.TabIndex = 24;
@@ -200,7 +201,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label14.Location = new Point(493, 140);
+            label14.Location = new Point(493, 149);
             label14.Name = "label14";
             label14.Size = new Size(94, 15);
             label14.TabIndex = 27;
@@ -208,7 +209,7 @@
             // 
             // txtCelsius
             // 
-            txtCelsius.Location = new Point(490, 157);
+            txtCelsius.Location = new Point(490, 166);
             txtCelsius.Name = "txtCelsius";
             txtCelsius.Size = new Size(164, 22);
             txtCelsius.TabIndex = 26;
@@ -217,7 +218,7 @@
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.Location = new Point(710, 138);
+            label15.Location = new Point(710, 147);
             label15.Name = "label15";
             label15.Size = new Size(56, 15);
             label15.TabIndex = 29;
@@ -225,43 +226,46 @@
             // 
             // txtMass
             // 
-            txtMass.Location = new Point(707, 155);
+            txtMass.Location = new Point(707, 164);
             txtMass.Name = "txtMass";
             txtMass.Size = new Size(164, 22);
             txtMass.TabIndex = 28;
             // 
             // btnDistance
             // 
-            btnDistance.Location = new Point(264, 228);
+            btnDistance.BackColor = SystemColors.Info;
+            btnDistance.Location = new Point(264, 235);
             btnDistance.Name = "btnDistance";
             btnDistance.Size = new Size(169, 25);
             btnDistance.TabIndex = 30;
             btnDistance.Text = "Calulate Distance";
-            btnDistance.UseVisualStyleBackColor = true;
+            btnDistance.UseVisualStyleBackColor = false;
             // 
             // btnTemperature
             // 
-            btnTemperature.Location = new Point(490, 228);
+            btnTemperature.BackColor = SystemColors.Info;
+            btnTemperature.Location = new Point(490, 235);
             btnTemperature.Name = "btnTemperature";
             btnTemperature.Size = new Size(169, 25);
             btnTemperature.TabIndex = 31;
             btnTemperature.Text = "Calulate Temperature";
-            btnTemperature.UseVisualStyleBackColor = true;
+            btnTemperature.UseVisualStyleBackColor = false;
             // 
             // btnEventHorizon
             // 
-            btnEventHorizon.Location = new Point(701, 228);
+            btnEventHorizon.BackColor = SystemColors.Info;
+            btnEventHorizon.Location = new Point(701, 235);
             btnEventHorizon.Name = "btnEventHorizon";
             btnEventHorizon.Size = new Size(169, 25);
             btnEventHorizon.TabIndex = 32;
             btnEventHorizon.Text = "Calulate Horizon";
-            btnEventHorizon.UseVisualStyleBackColor = true;
+            btnEventHorizon.UseVisualStyleBackColor = false;
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label16.Location = new Point(266, 259);
+            label16.Location = new Point(266, 266);
             label16.Name = "label16";
             label16.Size = new Size(98, 15);
             label16.TabIndex = 34;
@@ -269,7 +273,7 @@
             // 
             // txtDistanceResult
             // 
-            txtDistanceResult.Location = new Point(266, 277);
+            txtDistanceResult.Location = new Point(266, 284);
             txtDistanceResult.Name = "txtDistanceResult";
             txtDistanceResult.Size = new Size(167, 22);
             txtDistanceResult.TabIndex = 33;
@@ -278,7 +282,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label17.Location = new Point(493, 259);
+            label17.Location = new Point(493, 266);
             label17.Name = "label17";
             label17.Size = new Size(90, 15);
             label17.TabIndex = 36;
@@ -286,7 +290,7 @@
             // 
             // txtKelvinResult
             // 
-            txtKelvinResult.Location = new Point(493, 277);
+            txtKelvinResult.Location = new Point(493, 284);
             txtKelvinResult.Name = "txtKelvinResult";
             txtKelvinResult.Size = new Size(167, 22);
             txtKelvinResult.TabIndex = 35;
@@ -295,7 +299,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(701, 259);
+            label18.Location = new Point(701, 266);
             label18.Name = "label18";
             label18.Size = new Size(99, 15);
             label18.TabIndex = 38;
@@ -303,7 +307,7 @@
             // 
             // txtEventHorizonResult
             // 
-            txtEventHorizonResult.Location = new Point(701, 277);
+            txtEventHorizonResult.Location = new Point(701, 284);
             txtEventHorizonResult.Name = "txtEventHorizonResult";
             txtEventHorizonResult.Size = new Size(167, 22);
             txtEventHorizonResult.TabIndex = 37;
@@ -337,7 +341,7 @@
             // 
             cmbLanguage.FormattingEnabled = true;
             cmbLanguage.Items.AddRange(new object[] { "English", "French", "German" });
-            cmbLanguage.Location = new Point(175, 75);
+            cmbLanguage.Location = new Point(175, 80);
             cmbLanguage.Name = "cmbLanguage";
             cmbLanguage.Size = new Size(167, 23);
             cmbLanguage.TabIndex = 1;
@@ -347,7 +351,7 @@
             // 
             cmbTheme.FormattingEnabled = true;
             cmbTheme.Items.AddRange(new object[] { "Light", "Dark", "Flower", "Sky" });
-            cmbTheme.Location = new Point(358, 75);
+            cmbTheme.Location = new Point(358, 80);
             cmbTheme.Name = "cmbTheme";
             cmbTheme.Size = new Size(164, 23);
             cmbTheme.TabIndex = 2;
@@ -356,7 +360,7 @@
             // 
             label2.BackColor = SystemColors.ActiveCaption;
             label2.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(192, 52);
+            label2.Location = new Point(192, 57);
             label2.Name = "label2";
             label2.Size = new Size(122, 23);
             label2.TabIndex = 5;
@@ -366,7 +370,7 @@
             // 
             label3.BackColor = SystemColors.ActiveCaption;
             label3.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(415, 52);
+            label3.Location = new Point(415, 57);
             label3.Name = "label3";
             label3.Size = new Size(44, 23);
             label3.TabIndex = 6;
@@ -376,7 +380,7 @@
             // 
             label4.BackColor = SystemColors.ActiveCaption;
             label4.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(576, 52);
+            label4.Location = new Point(576, 54);
             label4.Name = "label4";
             label4.Size = new Size(76, 23);
             label4.TabIndex = 7;
@@ -386,7 +390,7 @@
             // 
             label5.BackColor = SystemColors.ActiveCaption;
             label5.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(750, 52);
+            label5.Location = new Point(750, 54);
             label5.Name = "label5";
             label5.Size = new Size(70, 23);
             label5.TabIndex = 8;
@@ -394,7 +398,7 @@
             // 
             // btnColor
             // 
-            btnColor.Location = new Point(537, 72);
+            btnColor.Location = new Point(537, 77);
             btnColor.Name = "btnColor";
             btnColor.Size = new Size(151, 26);
             btnColor.TabIndex = 9;
@@ -403,7 +407,7 @@
             // 
             // btnFont
             // 
-            btnFont.Location = new Point(703, 72);
+            btnFont.Location = new Point(703, 77);
             btnFont.Name = "btnFont";
             btnFont.Size = new Size(151, 26);
             btnFont.TabIndex = 10;
@@ -418,30 +422,30 @@
             label20.Size = new Size(824, 75);
             label20.TabIndex = 43;
             // 
-            // pictureBox1
+            // picFlag
             // 
-            pictureBox1.Location = new Point(60, 56);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.TabIndex = 44;
-            pictureBox1.TabStop = false;
+            picFlag.Location = new Point(60, 56);
+            picFlag.Name = "picFlag";
+            picFlag.Size = new Size(100, 50);
+            picFlag.TabIndex = 44;
+            picFlag.TabStop = false;
             // 
-            // label21
+            // lblServerStatus
             // 
-            label21.Font = new Font("Yu Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.Location = new Point(737, 24);
-            label21.Name = "label21";
-            label21.Size = new Size(131, 20);
-            label21.TabIndex = 45;
-            label21.Text = "Ｓｅｒｖｅｒ：　ｏｎ";
+            lblServerStatus.Font = new Font("Yu Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblServerStatus.Location = new Point(737, 24);
+            lblServerStatus.Name = "lblServerStatus";
+            lblServerStatus.Size = new Size(131, 20);
+            lblServerStatus.TabIndex = 45;
+            lblServerStatus.Text = "Ｓｅｒｖｅｒ：　ｏｎ";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 508);
-            Controls.Add(label21);
-            Controls.Add(pictureBox1);
+            Controls.Add(lblServerStatus);
+            Controls.Add(picFlag);
             Controls.Add(lblError);
             Controls.Add(dgvHistory);
             Controls.Add(label19);
@@ -485,7 +489,7 @@
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dgvHistory).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picFlag).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -532,8 +536,8 @@
         private Button btnColor;
         private Button btnFont;
         private Label label20;
-        private PictureBox pictureBox1;
+        private PictureBox picFlag;
         private Panel panel1;
-        private Label label21;
+        private Label lblServerStatus;
     }
 }
