@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\iastrocontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\iastrocontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\clientmainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\clientmainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\clientmainform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\clientmainform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\clientmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\clientmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\clientmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\clientmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|d:\\tafe\\programming diploma2\\github\\astroclient\\astroclient\\astroclient\\iastrocontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BFA04F1-63DD-4BF4-93A7-68C3007E9F50}|AstroClient\\AstroClient.csproj|solutionrelative:astroclient\\iastrocontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,15 +46,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IAstroContract.cs",
-              "DocumentMoniker": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\IAstroContract.cs",
-              "RelativeDocumentMoniker": "AstroClient\\IAstroContract.cs",
-              "ToolTip": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\IAstroContract.cs",
-              "RelativeToolTip": "AstroClient\\IAstroContract.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T12:47:34.252Z",
+              "DocumentIndex": 1,
+              "Title": "ClientMainForm.resx",
+              "DocumentMoniker": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\ClientMainForm.resx",
+              "RelativeDocumentMoniker": "AstroClient\\ClientMainForm.resx",
+              "ToolTip": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\ClientMainForm.resx",
+              "RelativeToolTip": "AstroClient\\ClientMainForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-09-30T15:06:02.059Z",
               "EditorCaption": ""
             },
             {
@@ -63,46 +66,57 @@
               "RelativeToolTip": "AstroClient\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T12:41:54.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-30T12:41:54.899Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "AstroClient\\Form1.Designer.cs",
-              "ToolTip": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\Form1.Designer.cs",
-              "RelativeToolTip": "AstroClient\\Form1.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T07:22:34.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\Form1.cs",
-              "RelativeDocumentMoniker": "AstroClient\\Form1.cs",
-              "ToolTip": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\Form1.cs",
-              "RelativeToolTip": "AstroClient\\Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "ClientMainForm.cs",
+              "DocumentMoniker": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\ClientMainForm.cs",
+              "RelativeDocumentMoniker": "AstroClient\\ClientMainForm.cs",
+              "ToolTip": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\ClientMainForm.cs",
+              "RelativeToolTip": "AstroClient\\ClientMainForm.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAiwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-15T05:45:29.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\Form1.cs",
-              "RelativeDocumentMoniker": "AstroClient\\Form1.cs",
-              "ToolTip": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\Form1.cs [Design]",
-              "RelativeToolTip": "AstroClient\\Form1.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "ClientMainForm.cs [Design]",
+              "DocumentMoniker": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\ClientMainForm.cs",
+              "RelativeDocumentMoniker": "AstroClient\\ClientMainForm.cs",
+              "ToolTip": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\ClientMainForm.cs [Design]",
+              "RelativeToolTip": "AstroClient\\ClientMainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-15T05:20:21.543Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientMainForm.Designer.cs",
+              "DocumentMoniker": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\ClientMainForm.Designer.cs",
+              "RelativeDocumentMoniker": "AstroClient\\ClientMainForm.Designer.cs",
+              "ToolTip": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\ClientMainForm.Designer.cs",
+              "RelativeToolTip": "AstroClient\\ClientMainForm.Designer.cs",
+              "ViewState": "AQIAAAECAAAAAAAAAAAQwBkCAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T07:22:34.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAstroContract.cs",
+              "DocumentMoniker": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\IAstroContract.cs",
+              "RelativeDocumentMoniker": "AstroClient\\IAstroContract.cs",
+              "ToolTip": "D:\\TAFE\\Programming Diploma2\\Github\\AstroClient\\AstroClient\\AstroClient\\IAstroContract.cs",
+              "RelativeToolTip": "AstroClient\\IAstroContract.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T12:47:34.252Z"
             }
           ]
         }

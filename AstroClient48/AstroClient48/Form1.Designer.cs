@@ -1,6 +1,11 @@
-﻿namespace AstroClient
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace AstroClient48
 {
-    partial class ClientMainForm
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -135,7 +140,7 @@
             btnVelocity.TabIndex = 18;
             btnVelocity.Text = "Calulate Velocity";
             btnVelocity.UseVisualStyleBackColor = false;
-            
+
             // 
             // txtObservedWavelength
             // 

@@ -19,7 +19,6 @@ D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debu
 D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.runtimeconfig.json
 D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.dll
 D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\AstroClient.pdb
-D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.Form1.resources
 D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.csproj.GenerateResource.cache
 D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.GeneratedMSBuildEditorConfig.editorconfig
 D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.AssemblyInfoInputs.cache
@@ -82,3 +81,4 @@ D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debu
 D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.csproj.AssemblyReference.cache
 D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroCli.A76F0542.Up2Date
+D:\TAFE\Programming Diploma2\Github\AstroClient\AstroClient\AstroClient\obj\Debug\net8.0-windows\AstroClient.ClientMainForm.resources

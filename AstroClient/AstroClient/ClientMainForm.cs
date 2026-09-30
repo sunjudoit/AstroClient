@@ -8,7 +8,7 @@ namespace AstroClient
         {
             InitializeComponent();
         }
-
+        /*
         private IAstroContract contract()
         {
             string localAddress = "net.pipe://localhost/AstroServer";
@@ -21,7 +21,11 @@ namespace AstroClient
             
             return channeling;
         }
+        */
+        private void btnVelocity_Click(object sender, EventArgs e)
+        {
 
+        }
         private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
 
