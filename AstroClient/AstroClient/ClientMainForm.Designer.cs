@@ -1,6 +1,6 @@
 ﻿namespace AstroClient
 {
-    partial class Form1
+    partial class ClientMainForm
     {
         /// <summary>
         ///  Required designer variable.
