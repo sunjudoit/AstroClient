@@ -33,471 +33,481 @@ namespace AstroClient48
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            txtVelocityResult = new TextBox();
-            btnVelocity = new Button();
-            txtObservedWavelength = new TextBox();
-            txtRestWavelength = new TextBox();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            txtParallaxAngle = new TextBox();
-            label14 = new Label();
-            txtCelsius = new TextBox();
-            label15 = new Label();
-            txtMass = new TextBox();
-            btnDistance = new Button();
-            btnTemperature = new Button();
-            btnEventHorizon = new Button();
-            label16 = new Label();
-            txtDistanceResult = new TextBox();
-            label17 = new Label();
-            txtKelvinResult = new TextBox();
-            label18 = new Label();
-            txtEventHorizonResult = new TextBox();
-            label19 = new Label();
-            dgvHistory = new DataGridView();
-            lblError = new Label();
-            cmbLanguage = new ComboBox();
-            cmbTheme = new ComboBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            btnColor = new Button();
-            btnFont = new Button();
-            label20 = new Label();
-            picFlag = new PictureBox();
-            lblServerStatus = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvHistory).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picFlag).BeginInit();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtVelocityResult = new System.Windows.Forms.TextBox();
+            this.btnVelocity = new System.Windows.Forms.Button();
+            this.txtObservedWavelength = new System.Windows.Forms.TextBox();
+            this.txtRestWavelength = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtParallaxAngle = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtCelsius = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtMass = new System.Windows.Forms.TextBox();
+            this.btnDistance = new System.Windows.Forms.Button();
+            this.btnTemperature = new System.Windows.Forms.Button();
+            this.btnEventHorizon = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtDistanceResult = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtKelvinResult = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtEventHorizonResult = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dgvHistory = new System.Windows.Forms.DataGridView();
+            this.lblError = new System.Windows.Forms.Label();
+            this.cmbLanguage = new System.Windows.Forms.ComboBox();
+            this.cmbTheme = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnColor = new System.Windows.Forms.Button();
+            this.btnFont = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.picFlag = new System.Windows.Forms.PictureBox();
+            this.lblServerStatus = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.BackColor = SystemColors.Control;
-            label1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(306, -1);
-            label1.Name = "label1";
-            label1.Size = new Size(305, 45);
-            label1.TabIndex = 0;
-            label1.Text = "Astronomical Processing";
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(306, -1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(305, 45);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Astronomical Processing";
             // 
             // label6
             // 
-            label6.Font = new Font("Gadugi", 9.75F, FontStyle.Bold);
-            label6.Location = new Point(87, 126);
-            label6.Name = "label6";
-            label6.Size = new Size(96, 23);
-            label6.TabIndex = 11;
-            label6.Text = "Star Velocity";
+            this.label6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(87, 126);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 23);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Star Velocity";
             // 
             // label7
             // 
-            label7.Font = new Font("Gadugi", 9.75F, FontStyle.Bold);
-            label7.Location = new Point(299, 127);
-            label7.Name = "label7";
-            label7.Size = new Size(113, 23);
-            label7.TabIndex = 12;
-            label7.Text = "Star Distance";
+            this.label7.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(299, 127);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(113, 23);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Star Distance";
             // 
             // label8
             // 
-            label8.Font = new Font("Gadugi", 9.75F, FontStyle.Bold);
-            label8.Location = new Point(495, 127);
-            label8.Name = "label8";
-            label8.Size = new Size(164, 23);
-            label8.TabIndex = 13;
-            label8.Text = "Temperature Conversion";
+            this.label8.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(495, 127);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(164, 23);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Temperature Conversion";
             // 
             // label9
             // 
-            label9.Font = new Font("Gadugi", 9.75F, FontStyle.Bold);
-            label9.Location = new Point(739, 127);
-            label9.Name = "label9";
-            label9.Size = new Size(104, 23);
-            label9.TabIndex = 14;
-            label9.Text = "Event Horizon";
+            this.label9.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(739, 127);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(104, 23);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Event Horizon";
             // 
             // txtVelocityResult
             // 
-            txtVelocityResult.Location = new Point(50, 284);
-            txtVelocityResult.Name = "txtVelocityResult";
-            txtVelocityResult.Size = new Size(167, 22);
-            txtVelocityResult.TabIndex = 17;
+            this.txtVelocityResult.Location = new System.Drawing.Point(50, 284);
+            this.txtVelocityResult.Name = "txtVelocityResult";
+            this.txtVelocityResult.Size = new System.Drawing.Size(167, 22);
+            this.txtVelocityResult.TabIndex = 17;
             // 
             // btnVelocity
             // 
-            btnVelocity.BackColor = SystemColors.Info;
-            btnVelocity.Location = new Point(48, 235);
-            btnVelocity.Name = "btnVelocity";
-            btnVelocity.Size = new Size(169, 25);
-            btnVelocity.TabIndex = 18;
-            btnVelocity.Text = "Calulate Velocity";
-            btnVelocity.UseVisualStyleBackColor = false;
-
+            this.btnVelocity.BackColor = System.Drawing.SystemColors.Info;
+            this.btnVelocity.Location = new System.Drawing.Point(48, 235);
+            this.btnVelocity.Name = "btnVelocity";
+            this.btnVelocity.Size = new System.Drawing.Size(169, 25);
+            this.btnVelocity.TabIndex = 18;
+            this.btnVelocity.Text = "Calulate Velocity";
+            this.btnVelocity.UseVisualStyleBackColor = false;
+            this.btnVelocity.Click += new System.EventHandler(this.btnVelocity_Click);
             // 
             // txtObservedWavelength
             // 
-            txtObservedWavelength.Location = new Point(49, 166);
-            txtObservedWavelength.Name = "txtObservedWavelength";
-            txtObservedWavelength.Size = new Size(164, 22);
-            txtObservedWavelength.TabIndex = 19;
+            this.txtObservedWavelength.Location = new System.Drawing.Point(49, 166);
+            this.txtObservedWavelength.Name = "txtObservedWavelength";
+            this.txtObservedWavelength.Size = new System.Drawing.Size(164, 22);
+            this.txtObservedWavelength.TabIndex = 19;
             // 
             // txtRestWavelength
             // 
-            txtRestWavelength.Location = new Point(50, 207);
-            txtRestWavelength.Name = "txtRestWavelength";
-            txtRestWavelength.Size = new Size(164, 22);
-            txtRestWavelength.TabIndex = 20;
+            this.txtRestWavelength.Location = new System.Drawing.Point(50, 207);
+            this.txtRestWavelength.Name = "txtRestWavelength";
+            this.txtRestWavelength.Size = new System.Drawing.Size(164, 22);
+            this.txtRestWavelength.TabIndex = 20;
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(52, 149);
-            label10.Name = "label10";
-            label10.Size = new Size(142, 15);
-            label10.TabIndex = 21;
-            label10.Text = "Observed Wavelength (nm)";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(52, 149);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(142, 15);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Observed Wavelength (nm)";
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(53, 189);
-            label11.Name = "label11";
-            label11.Size = new Size(116, 15);
-            label11.TabIndex = 22;
-            label11.Text = "Rest Wavelength (nm)";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(53, 189);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 15);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Rest Wavelength (nm)";
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(50, 266);
-            label12.Name = "label12";
-            label12.Size = new Size(71, 15);
-            label12.TabIndex = 23;
-            label12.Text = "Result (m/s)";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(50, 266);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 15);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Result (m/s)";
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.Location = new Point(272, 149);
-            label13.Name = "label13";
-            label13.Size = new Size(121, 15);
-            label13.TabIndex = 25;
-            label13.Text = "Parallax Angle (arcsec)";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(272, 149);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(121, 15);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Parallax Angle (arcsec)";
             // 
             // txtParallaxAngle
             // 
-            txtParallaxAngle.Location = new Point(269, 166);
-            txtParallaxAngle.Name = "txtParallaxAngle";
-            txtParallaxAngle.Size = new Size(164, 22);
-            txtParallaxAngle.TabIndex = 24;
+            this.txtParallaxAngle.Location = new System.Drawing.Point(269, 166);
+            this.txtParallaxAngle.Name = "txtParallaxAngle";
+            this.txtParallaxAngle.Size = new System.Drawing.Size(164, 22);
+            this.txtParallaxAngle.TabIndex = 24;
             // 
             // label14
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label14.Location = new Point(493, 149);
-            label14.Name = "label14";
-            label14.Size = new Size(94, 15);
-            label14.TabIndex = 27;
-            label14.Text = "Temperature (°C)";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(493, 149);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(94, 15);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Temperature (°C)";
             // 
             // txtCelsius
             // 
-            txtCelsius.Location = new Point(490, 166);
-            txtCelsius.Name = "txtCelsius";
-            txtCelsius.Size = new Size(164, 22);
-            txtCelsius.TabIndex = 26;
+            this.txtCelsius.Location = new System.Drawing.Point(490, 166);
+            this.txtCelsius.Name = "txtCelsius";
+            this.txtCelsius.Size = new System.Drawing.Size(164, 22);
+            this.txtCelsius.TabIndex = 26;
             // 
             // label15
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.Location = new Point(710, 147);
-            label15.Name = "label15";
-            label15.Size = new Size(56, 15);
-            label15.TabIndex = 29;
-            label15.Text = "Mass (kg)";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(710, 147);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 15);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "Mass (kg)";
             // 
             // txtMass
             // 
-            txtMass.Location = new Point(707, 164);
-            txtMass.Name = "txtMass";
-            txtMass.Size = new Size(164, 22);
-            txtMass.TabIndex = 28;
+            this.txtMass.Location = new System.Drawing.Point(707, 164);
+            this.txtMass.Name = "txtMass";
+            this.txtMass.Size = new System.Drawing.Size(164, 22);
+            this.txtMass.TabIndex = 28;
             // 
             // btnDistance
             // 
-            btnDistance.BackColor = SystemColors.Info;
-            btnDistance.Location = new Point(264, 235);
-            btnDistance.Name = "btnDistance";
-            btnDistance.Size = new Size(169, 25);
-            btnDistance.TabIndex = 30;
-            btnDistance.Text = "Calulate Distance";
-            btnDistance.UseVisualStyleBackColor = false;
+            this.btnDistance.BackColor = System.Drawing.SystemColors.Info;
+            this.btnDistance.Location = new System.Drawing.Point(264, 235);
+            this.btnDistance.Name = "btnDistance";
+            this.btnDistance.Size = new System.Drawing.Size(169, 25);
+            this.btnDistance.TabIndex = 30;
+            this.btnDistance.Text = "Calulate Distance";
+            this.btnDistance.UseVisualStyleBackColor = false;
+            this.btnDistance.Click += new System.EventHandler(this.btnDistance_Click);
             // 
             // btnTemperature
             // 
-            btnTemperature.BackColor = SystemColors.Info;
-            btnTemperature.Location = new Point(490, 235);
-            btnTemperature.Name = "btnTemperature";
-            btnTemperature.Size = new Size(169, 25);
-            btnTemperature.TabIndex = 31;
-            btnTemperature.Text = "Calulate Temperature";
-            btnTemperature.UseVisualStyleBackColor = false;
+            this.btnTemperature.BackColor = System.Drawing.SystemColors.Info;
+            this.btnTemperature.Location = new System.Drawing.Point(490, 235);
+            this.btnTemperature.Name = "btnTemperature";
+            this.btnTemperature.Size = new System.Drawing.Size(169, 25);
+            this.btnTemperature.TabIndex = 31;
+            this.btnTemperature.Text = "Calulate Temperature";
+            this.btnTemperature.UseVisualStyleBackColor = false;
+            this.btnTemperature.Click += new System.EventHandler(this.btnTemperature_Click);
             // 
             // btnEventHorizon
             // 
-            btnEventHorizon.BackColor = SystemColors.Info;
-            btnEventHorizon.Location = new Point(701, 235);
-            btnEventHorizon.Name = "btnEventHorizon";
-            btnEventHorizon.Size = new Size(169, 25);
-            btnEventHorizon.TabIndex = 32;
-            btnEventHorizon.Text = "Calulate Horizon";
-            btnEventHorizon.UseVisualStyleBackColor = false;
+            this.btnEventHorizon.BackColor = System.Drawing.SystemColors.Info;
+            this.btnEventHorizon.Location = new System.Drawing.Point(701, 235);
+            this.btnEventHorizon.Name = "btnEventHorizon";
+            this.btnEventHorizon.Size = new System.Drawing.Size(169, 25);
+            this.btnEventHorizon.TabIndex = 32;
+            this.btnEventHorizon.Text = "Calulate Horizon";
+            this.btnEventHorizon.UseVisualStyleBackColor = false;
+            this.btnEventHorizon.Click += new System.EventHandler(this.btnEventHorizon_Click);
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label16.Location = new Point(266, 266);
-            label16.Name = "label16";
-            label16.Size = new Size(98, 15);
-            label16.TabIndex = 34;
-            label16.Text = "Distance (parsecs)";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(266, 266);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(98, 15);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Distance (parsecs)";
             // 
             // txtDistanceResult
             // 
-            txtDistanceResult.Location = new Point(266, 284);
-            txtDistanceResult.Name = "txtDistanceResult";
-            txtDistanceResult.Size = new Size(167, 22);
-            txtDistanceResult.TabIndex = 33;
+            this.txtDistanceResult.Location = new System.Drawing.Point(266, 284);
+            this.txtDistanceResult.Name = "txtDistanceResult";
+            this.txtDistanceResult.Size = new System.Drawing.Size(167, 22);
+            this.txtDistanceResult.TabIndex = 33;
             // 
             // label17
             // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label17.Location = new Point(493, 266);
-            label17.Name = "label17";
-            label17.Size = new Size(90, 15);
-            label17.TabIndex = 36;
-            label17.Text = "Temperature (K)";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(493, 266);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(90, 15);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "Temperature (K)";
             // 
             // txtKelvinResult
             // 
-            txtKelvinResult.Location = new Point(493, 284);
-            txtKelvinResult.Name = "txtKelvinResult";
-            txtKelvinResult.Size = new Size(167, 22);
-            txtKelvinResult.TabIndex = 35;
+            this.txtKelvinResult.Location = new System.Drawing.Point(493, 284);
+            this.txtKelvinResult.Name = "txtKelvinResult";
+            this.txtKelvinResult.Size = new System.Drawing.Size(167, 22);
+            this.txtKelvinResult.TabIndex = 35;
             // 
             // label18
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Book Antiqua", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(701, 266);
-            label18.Name = "label18";
-            label18.Size = new Size(99, 15);
-            label18.TabIndex = 38;
-            label18.Text = "Event Horizon (m)";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(701, 266);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(99, 15);
+            this.label18.TabIndex = 38;
+            this.label18.Text = "Event Horizon (m)";
             // 
             // txtEventHorizonResult
             // 
-            txtEventHorizonResult.Location = new Point(701, 284);
-            txtEventHorizonResult.Name = "txtEventHorizonResult";
-            txtEventHorizonResult.Size = new Size(167, 22);
-            txtEventHorizonResult.TabIndex = 37;
+            this.txtEventHorizonResult.Location = new System.Drawing.Point(701, 284);
+            this.txtEventHorizonResult.Name = "txtEventHorizonResult";
+            this.txtEventHorizonResult.Size = new System.Drawing.Size(167, 22);
+            this.txtEventHorizonResult.TabIndex = 37;
             // 
             // label19
             // 
-            label19.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.Location = new Point(401, 317);
-            label19.Name = "label19";
-            label19.Size = new Size(140, 23);
-            label19.TabIndex = 39;
-            label19.Text = "Calculation History";
+            this.label19.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(401, 317);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(140, 23);
+            this.label19.TabIndex = 39;
+            this.label19.Text = "Calculation History";
             // 
             // dgvHistory
             // 
-            dgvHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHistory.Location = new Point(50, 343);
-            dgvHistory.Name = "dgvHistory";
-            dgvHistory.Size = new Size(829, 117);
-            dgvHistory.TabIndex = 40;
+            this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistory.Location = new System.Drawing.Point(50, 343);
+            this.dgvHistory.Name = "dgvHistory";
+            this.dgvHistory.Size = new System.Drawing.Size(829, 117);
+            this.dgvHistory.TabIndex = 40;
             // 
             // lblError
             // 
-            lblError.Location = new Point(49, 472);
-            lblError.Name = "lblError";
-            lblError.Size = new Size(828, 22);
-            lblError.TabIndex = 41;
-            lblError.Text = "Error Message";
+            this.lblError.Location = new System.Drawing.Point(49, 472);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(828, 22);
+            this.lblError.TabIndex = 41;
+            this.lblError.Text = "Error Message";
             // 
             // cmbLanguage
             // 
-            cmbLanguage.FormattingEnabled = true;
-            cmbLanguage.Items.AddRange(new object[] { "English", "French", "German" });
-            cmbLanguage.Location = new Point(175, 80);
-            cmbLanguage.Name = "cmbLanguage";
-            cmbLanguage.Size = new Size(167, 23);
-            cmbLanguage.TabIndex = 1;
-            cmbLanguage.SelectedIndexChanged += cmbLanguage_SelectedIndexChanged;
+            this.cmbLanguage.FormattingEnabled = true;
+            this.cmbLanguage.Items.AddRange(new object[] {
+            "English",
+            "French",
+            "German"});
+            this.cmbLanguage.Location = new System.Drawing.Point(175, 80);
+            this.cmbLanguage.Name = "cmbLanguage";
+            this.cmbLanguage.Size = new System.Drawing.Size(167, 23);
+            this.cmbLanguage.TabIndex = 1;
             // 
             // cmbTheme
             // 
-            cmbTheme.FormattingEnabled = true;
-            cmbTheme.Items.AddRange(new object[] { "Light", "Dark", "Flower", "Sky" });
-            cmbTheme.Location = new Point(358, 80);
-            cmbTheme.Name = "cmbTheme";
-            cmbTheme.Size = new Size(164, 23);
-            cmbTheme.TabIndex = 2;
+            this.cmbTheme.FormattingEnabled = true;
+            this.cmbTheme.Items.AddRange(new object[] {
+            "Light",
+            "Dark",
+            "Flower",
+            "Sky"});
+            this.cmbTheme.Location = new System.Drawing.Point(358, 80);
+            this.cmbTheme.Name = "cmbTheme";
+            this.cmbTheme.Size = new System.Drawing.Size(164, 23);
+            this.cmbTheme.TabIndex = 2;
             // 
             // label2
             // 
-            label2.BackColor = SystemColors.ActiveCaption;
-            label2.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(192, 57);
-            label2.Name = "label2";
-            label2.Size = new Size(122, 23);
-            label2.TabIndex = 5;
-            label2.Text = "Language and Layout ";
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(192, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 23);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Language and Layout ";
             // 
             // label3
             // 
-            label3.BackColor = SystemColors.ActiveCaption;
-            label3.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(415, 57);
-            label3.Name = "label3";
-            label3.Size = new Size(44, 23);
-            label3.TabIndex = 6;
-            label3.Text = "Theme";
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(415, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 23);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Theme";
             // 
             // label4
             // 
-            label4.BackColor = SystemColors.ActiveCaption;
-            label4.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(576, 54);
-            label4.Name = "label4";
-            label4.Size = new Size(76, 23);
-            label4.TabIndex = 7;
-            label4.Text = "Color Dialog";
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(576, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 23);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Color Dialog";
             // 
             // label5
             // 
-            label5.BackColor = SystemColors.ActiveCaption;
-            label5.Font = new Font("Gadugi", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(750, 54);
-            label5.Name = "label5";
-            label5.Size = new Size(70, 23);
-            label5.TabIndex = 8;
-            label5.Text = "Font Dialog";
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(750, 54);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 23);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Font Dialog";
             // 
             // btnColor
             // 
-            btnColor.Location = new Point(537, 77);
-            btnColor.Name = "btnColor";
-            btnColor.Size = new Size(151, 26);
-            btnColor.TabIndex = 9;
-            btnColor.Text = "Select Color";
-            btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Location = new System.Drawing.Point(537, 77);
+            this.btnColor.Name = "btnColor";
+            this.btnColor.Size = new System.Drawing.Size(151, 26);
+            this.btnColor.TabIndex = 9;
+            this.btnColor.Text = "Select Color";
+            this.btnColor.UseVisualStyleBackColor = true;
             // 
             // btnFont
             // 
-            btnFont.Location = new Point(703, 77);
-            btnFont.Name = "btnFont";
-            btnFont.Size = new Size(151, 26);
-            btnFont.TabIndex = 10;
-            btnFont.Text = "Select Font";
-            btnFont.UseVisualStyleBackColor = true;
+            this.btnFont.Location = new System.Drawing.Point(703, 77);
+            this.btnFont.Name = "btnFont";
+            this.btnFont.Size = new System.Drawing.Size(151, 26);
+            this.btnFont.TabIndex = 10;
+            this.btnFont.Text = "Select Font";
+            this.btnFont.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
-            label20.BackColor = SystemColors.ActiveCaption;
-            label20.Location = new Point(48, 44);
-            label20.Name = "label20";
-            label20.Size = new Size(824, 75);
-            label20.TabIndex = 43;
+            this.label20.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label20.Location = new System.Drawing.Point(48, 44);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(824, 75);
+            this.label20.TabIndex = 43;
             // 
             // picFlag
             // 
-            picFlag.Location = new Point(60, 56);
-            picFlag.Name = "picFlag";
-            picFlag.Size = new Size(100, 50);
-            picFlag.TabIndex = 44;
-            picFlag.TabStop = false;
+            this.picFlag.Location = new System.Drawing.Point(60, 56);
+            this.picFlag.Name = "picFlag";
+            this.picFlag.Size = new System.Drawing.Size(100, 50);
+            this.picFlag.TabIndex = 44;
+            this.picFlag.TabStop = false;
             // 
             // lblServerStatus
             // 
-            lblServerStatus.Font = new Font("Yu Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblServerStatus.Location = new Point(737, 24);
-            lblServerStatus.Name = "lblServerStatus";
-            lblServerStatus.Size = new Size(131, 20);
-            lblServerStatus.TabIndex = 45;
-            lblServerStatus.Text = "Ｓｅｒｖｅｒ：　ｏｎ";
+            this.lblServerStatus.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerStatus.Location = new System.Drawing.Point(737, 24);
+            this.lblServerStatus.Name = "lblServerStatus";
+            this.lblServerStatus.Size = new System.Drawing.Size(131, 20);
+            this.lblServerStatus.TabIndex = 45;
+            this.lblServerStatus.Text = "Ｓｅｒｖｅｒ：　ｏｎ";
             // 
-            // ClientMainForm
+            // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 508);
-            Controls.Add(lblServerStatus);
-            Controls.Add(picFlag);
-            Controls.Add(lblError);
-            Controls.Add(dgvHistory);
-            Controls.Add(label19);
-            Controls.Add(label18);
-            Controls.Add(txtEventHorizonResult);
-            Controls.Add(label17);
-            Controls.Add(txtKelvinResult);
-            Controls.Add(label16);
-            Controls.Add(txtDistanceResult);
-            Controls.Add(btnEventHorizon);
-            Controls.Add(btnTemperature);
-            Controls.Add(btnDistance);
-            Controls.Add(label15);
-            Controls.Add(txtMass);
-            Controls.Add(label14);
-            Controls.Add(txtCelsius);
-            Controls.Add(label13);
-            Controls.Add(txtParallaxAngle);
-            Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(txtRestWavelength);
-            Controls.Add(txtObservedWavelength);
-            Controls.Add(btnVelocity);
-            Controls.Add(txtVelocityResult);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(btnFont);
-            Controls.Add(btnColor);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(cmbTheme);
-            Controls.Add(cmbLanguage);
-            Controls.Add(label1);
-            Controls.Add(label20);
-            Font = new Font("Perpetua Titling MT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Name = "ClientMainForm";
-            Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dgvHistory).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picFlag).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(914, 508);
+            this.Controls.Add(this.lblServerStatus);
+            this.Controls.Add(this.picFlag);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.dgvHistory);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.txtEventHorizonResult);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.txtKelvinResult);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtDistanceResult);
+            this.Controls.Add(this.btnEventHorizon);
+            this.Controls.Add(this.btnTemperature);
+            this.Controls.Add(this.btnDistance);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txtMass);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtCelsius);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtParallaxAngle);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtRestWavelength);
+            this.Controls.Add(this.txtObservedWavelength);
+            this.Controls.Add(this.btnVelocity);
+            this.Controls.Add(this.txtVelocityResult);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnFont);
+            this.Controls.Add(this.btnColor);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cmbTheme);
+            this.Controls.Add(this.cmbLanguage);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label20);
+            this.Font = new System.Drawing.Font("Perpetua Titling MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "Form1";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
