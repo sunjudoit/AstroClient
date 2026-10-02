@@ -152,5 +152,17 @@ namespace AstroClient48
                 this.BackColor = colorDialog.Color;
             }
         }
+
+        private void btnFont_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+            DialogResult result = fontDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.Font = fontDialog.Font;
+            }
+
+        }
     }
 }

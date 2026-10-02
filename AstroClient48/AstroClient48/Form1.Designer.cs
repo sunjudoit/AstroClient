@@ -429,6 +429,7 @@ namespace AstroClient48
             this.btnFont.TabIndex = 10;
             this.btnFont.Text = "Select Font";
             this.btnFont.UseVisualStyleBackColor = true;
+            this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
             // 
             // label20
             // 
