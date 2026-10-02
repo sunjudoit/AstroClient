@@ -209,9 +209,9 @@ namespace AstroClient48
             this.label14.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(493, 149);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 15);
+            this.label14.Size = new System.Drawing.Size(90, 15);
             this.label14.TabIndex = 27;
-            this.label14.Text = "Temperature (°C)";
+            this.label14.Text = "Temperature (C)";
             // 
             // txtCelsius
             // 

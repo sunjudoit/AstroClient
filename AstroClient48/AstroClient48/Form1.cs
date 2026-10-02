@@ -16,6 +16,12 @@ namespace AstroClient48
         public Form1()
         {
             InitializeComponent();
+
+            dgvHistory.Columns.Add("Calculation", "Calculation");
+            dgvHistory.Columns.Add("Input", "Input");
+            dgvHistory.Columns.Add("Result", "Result");
+
+            dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private IAstroContract contract()
         {
@@ -47,6 +53,12 @@ namespace AstroClient48
                 double velocityResult = channeling.StarVelocity(observedWavelength, restWavelength);
 
                 txtVelocityResult.Text = velocityResult.ToString("F2");
+
+                dgvHistory.Rows.Add(
+                    "Star Velocity",
+                    observedWavelength + "nm," + restWavelength + "nm",
+                    velocityResult.ToString("F2") + "m/s"
+                    );
             }
             catch (Exception ex)
             {
@@ -66,6 +78,12 @@ namespace AstroClient48
                 double distanceResult = channeling.StarDistance(parallaxAngle);
 
                 txtDistanceResult.Text = distanceResult.ToString("F2");
+
+                dgvHistory.Rows.Add(
+                    "Star Distance",
+                    parallaxAngle + "arcsec",
+                    distanceResult.ToString("F2") + "parsecs"
+                    );
             }
             catch (Exception ex)
             {
@@ -81,9 +99,16 @@ namespace AstroClient48
 
                 IAstroContract channeling = contract();
 
-                double KelvinResult = channeling.CelsiusToKelvin(celsius);
+                double kelvinResult = channeling.CelsiusToKelvin(celsius);
 
-                txtKelvinResult.Text = KelvinResult.ToString("F2");
+                txtKelvinResult.Text = kelvinResult.ToString("F2");
+
+                dgvHistory.Rows.Add(
+                    "Temperature Conversion",
+                    celsius + "C",
+                    kelvinResult.ToString("F2") + "K"
+                    );
+
             }
             catch (Exception ex)
             {
@@ -100,9 +125,16 @@ namespace AstroClient48
 
                 IAstroContract channeling = contract();
 
-                double HorizonResult = channeling.BlackholeEventHorizon(mass);
+                double horizonResult = channeling.BlackholeEventHorizon(mass);
 
-                txtEventHorizonResult.Text = HorizonResult.ToString("E4");
+                txtEventHorizonResult.Text = horizonResult.ToString("E4");
+
+                dgvHistory.Rows.Add(
+                    "Event Horizon",
+                    mass + "kg",
+                    horizonResult.ToString("E4") + "m"
+                    );
+
             }
             catch (Exception ex)
             {
