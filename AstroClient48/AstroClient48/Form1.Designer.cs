@@ -80,11 +80,11 @@ namespace AstroClient48
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(306, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 45);
+            this.label1.Size = new System.Drawing.Size(324, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Astronomical Processing";
             // 
@@ -419,6 +419,7 @@ namespace AstroClient48
             this.btnColor.TabIndex = 9;
             this.btnColor.Text = "Select Color";
             this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnFont
             // 

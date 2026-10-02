@@ -141,5 +141,16 @@ namespace AstroClient48
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void btnColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+
+            DialogResult result = colorDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.BackColor = colorDialog.Color;
+            }
+        }
     }
 }
