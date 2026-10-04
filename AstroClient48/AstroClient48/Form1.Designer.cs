@@ -35,7 +35,6 @@ namespace AstroClient48
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtVelocityResult = new System.Windows.Forms.TextBox();
@@ -71,11 +70,13 @@ namespace AstroClient48
             this.label5 = new System.Windows.Forms.Label();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnFont = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
             this.picFlag = new System.Windows.Forms.PictureBox();
             this.lblServerStatus = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panelTopMenu = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
+            this.panelTopMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -96,15 +97,6 @@ namespace AstroClient48
             this.label6.Size = new System.Drawing.Size(96, 23);
             this.label6.TabIndex = 11;
             this.label6.Text = "Star Velocity";
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(299, 127);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 23);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Star Distance";
             // 
             // label8
             // 
@@ -353,7 +345,7 @@ namespace AstroClient48
             "English",
             "French",
             "German"});
-            this.cmbLanguage.Location = new System.Drawing.Point(175, 80);
+            this.cmbLanguage.Location = new System.Drawing.Point(127, 31);
             this.cmbLanguage.Name = "cmbLanguage";
             this.cmbLanguage.Size = new System.Drawing.Size(167, 23);
             this.cmbLanguage.TabIndex = 1;
@@ -362,20 +354,20 @@ namespace AstroClient48
             // 
             this.cmbTheme.FormattingEnabled = true;
             this.cmbTheme.Items.AddRange(new object[] {
+            "Default",
             "Light",
-            "Dark",
-            "Flower",
-            "Sky"});
-            this.cmbTheme.Location = new System.Drawing.Point(358, 80);
+            "Dark"});
+            this.cmbTheme.Location = new System.Drawing.Point(310, 31);
             this.cmbTheme.Name = "cmbTheme";
             this.cmbTheme.Size = new System.Drawing.Size(164, 23);
             this.cmbTheme.TabIndex = 2;
+            this.cmbTheme.SelectedIndexChanged += new System.EventHandler(this.cmbTheme_SelectedIndexChanged);
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(192, 57);
+            this.label2.Location = new System.Drawing.Point(149, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 23);
             this.label2.TabIndex = 5;
@@ -383,9 +375,9 @@ namespace AstroClient48
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(415, 57);
+            this.label3.Location = new System.Drawing.Point(371, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 23);
             this.label3.TabIndex = 6;
@@ -393,9 +385,9 @@ namespace AstroClient48
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(576, 54);
+            this.label4.Location = new System.Drawing.Point(527, 8);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 23);
             this.label4.TabIndex = 7;
@@ -403,9 +395,9 @@ namespace AstroClient48
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(750, 54);
+            this.label5.Location = new System.Drawing.Point(699, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 23);
             this.label5.TabIndex = 8;
@@ -413,7 +405,7 @@ namespace AstroClient48
             // 
             // btnColor
             // 
-            this.btnColor.Location = new System.Drawing.Point(537, 77);
+            this.btnColor.Location = new System.Drawing.Point(489, 28);
             this.btnColor.Name = "btnColor";
             this.btnColor.Size = new System.Drawing.Size(151, 26);
             this.btnColor.TabIndex = 9;
@@ -423,7 +415,7 @@ namespace AstroClient48
             // 
             // btnFont
             // 
-            this.btnFont.Location = new System.Drawing.Point(703, 77);
+            this.btnFont.Location = new System.Drawing.Point(655, 28);
             this.btnFont.Name = "btnFont";
             this.btnFont.Size = new System.Drawing.Size(151, 26);
             this.btnFont.TabIndex = 10;
@@ -431,17 +423,10 @@ namespace AstroClient48
             this.btnFont.UseVisualStyleBackColor = true;
             this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
             // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label20.Location = new System.Drawing.Point(48, 44);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(824, 75);
-            this.label20.TabIndex = 43;
-            // 
             // picFlag
             // 
-            this.picFlag.Location = new System.Drawing.Point(60, 56);
+            this.picFlag.BackColor = System.Drawing.Color.Transparent;
+            this.picFlag.Location = new System.Drawing.Point(12, 7);
             this.picFlag.Name = "picFlag";
             this.picFlag.Size = new System.Drawing.Size(100, 50);
             this.picFlag.TabIndex = 44;
@@ -456,13 +441,41 @@ namespace AstroClient48
             this.lblServerStatus.TabIndex = 45;
             this.lblServerStatus.Text = "Ｓｅｒｖｅｒ：　ｏｎ";
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(304, 126);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(113, 23);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Star Distance";
+            // 
+            // panelTopMenu
+            // 
+            this.panelTopMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panelTopMenu.Controls.Add(this.picFlag);
+            this.panelTopMenu.Controls.Add(this.btnFont);
+            this.panelTopMenu.Controls.Add(this.btnColor);
+            this.panelTopMenu.Controls.Add(this.label5);
+            this.panelTopMenu.Controls.Add(this.label4);
+            this.panelTopMenu.Controls.Add(this.label3);
+            this.panelTopMenu.Controls.Add(this.label2);
+            this.panelTopMenu.Controls.Add(this.cmbTheme);
+            this.panelTopMenu.Controls.Add(this.cmbLanguage);
+            this.panelTopMenu.Location = new System.Drawing.Point(48, 47);
+            this.panelTopMenu.Name = "panelTopMenu";
+            this.panelTopMenu.Size = new System.Drawing.Size(830, 67);
+            this.panelTopMenu.TabIndex = 47;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 508);
+            this.Controls.Add(this.panelTopMenu);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.lblServerStatus);
-            this.Controls.Add(this.picFlag);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.dgvHistory);
             this.Controls.Add(this.label19);
@@ -490,23 +503,14 @@ namespace AstroClient48
             this.Controls.Add(this.txtVelocityResult);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnFont);
-            this.Controls.Add(this.btnColor);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbTheme);
-            this.Controls.Add(this.cmbLanguage);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label20);
             this.Font = new System.Drawing.Font("Perpetua Titling MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
+            this.panelTopMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,7 +520,6 @@ namespace AstroClient48
 
         private Label label1;
         private Label label6;
-        private Label label7;
         private Label label8;
         private Label label9;
         private TextBox txtVelocityResult;
@@ -553,9 +556,10 @@ namespace AstroClient48
         private Label label5;
         private Button btnColor;
         private Button btnFont;
-        private Label label20;
         private PictureBox picFlag;
         private Panel panel1;
         private Label lblServerStatus;
+        private Label label7;
+        private Panel panelTopMenu;
     }
 }

@@ -22,6 +22,9 @@ namespace AstroClient48
             dgvHistory.Columns.Add("Result", "Result");
 
             dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
+
+        
         }
         private IAstroContract contract()
         {
@@ -35,10 +38,7 @@ namespace AstroClient48
 
             return channeling;
         }
-        private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnVelocity_Click(object sender, EventArgs e)
         {
@@ -162,6 +162,54 @@ namespace AstroClient48
             {
                 this.Font = fontDialog.Font;
             }
+
+        }
+
+        private void cmbTheme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cmbTheme.SelectedItem.ToString() == "Default")
+            {
+                this.BackColor = SystemColors.Control;
+
+                panelTopMenu.BackColor = SystemColors.GradientActiveCaption;
+
+
+                btnVelocity.BackColor = SystemColors.Info;
+                btnDistance.BackColor = SystemColors.Info;
+                btnTemperature.BackColor = SystemColors.Info;
+                btnEventHorizon.BackColor = SystemColors.Info;
+
+            }
+            if (cmbTheme.SelectedItem.ToString() == "Light") 
+            { 
+                this.BackColor = Color.Beige;
+
+                panelTopMenu.BackColor = Color.LightBlue;
+
+
+                btnVelocity.BackColor = Color.LightBlue;
+                btnDistance.BackColor = Color.LightBlue;
+                btnTemperature.BackColor = Color.LightBlue;
+                btnEventHorizon.BackColor = Color.LightBlue;
+
+            }
+            if (cmbTheme.SelectedItem.ToString() == "Dark")
+            {
+                this.BackColor = Color.DarkGray;
+                panelTopMenu.BackColor = Color.SteelBlue;
+
+                btnVelocity.BackColor = Color.SteelBlue;
+                btnDistance.BackColor = Color.SteelBlue;
+                btnTemperature.BackColor = Color.SteelBlue;
+                btnEventHorizon.BackColor = Color.SteelBlue;
+
+            }
+
+        }
+
+        private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
