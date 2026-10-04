@@ -22,9 +22,11 @@ namespace AstroClient48
             dgvHistory.Columns.Add("Result", "Result");
 
             dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
 
-        
+            picFlag.Image = Properties.Resources.UK;
+
+
+
         }
         private IAstroContract contract()
         {
@@ -174,7 +176,8 @@ namespace AstroClient48
 
                 panelTopMenu.BackColor = SystemColors.GradientActiveCaption;
 
-
+                btnColor.BackColor = SystemColors.Info;
+                btnFont.BackColor = SystemColors.Info;
                 btnVelocity.BackColor = SystemColors.Info;
                 btnDistance.BackColor = SystemColors.Info;
                 btnTemperature.BackColor = SystemColors.Info;
@@ -185,9 +188,10 @@ namespace AstroClient48
             { 
                 this.BackColor = Color.Beige;
 
-                panelTopMenu.BackColor = Color.LightBlue;
+                panelTopMenu.BackColor = Color.Bisque;
 
-
+                btnColor.BackColor = Color.LightBlue;
+                btnFont.BackColor = Color.LightBlue;
                 btnVelocity.BackColor = Color.LightBlue;
                 btnDistance.BackColor = Color.LightBlue;
                 btnTemperature.BackColor = Color.LightBlue;
@@ -197,8 +201,10 @@ namespace AstroClient48
             if (cmbTheme.SelectedItem.ToString() == "Dark")
             {
                 this.BackColor = Color.DarkGray;
-                panelTopMenu.BackColor = Color.SteelBlue;
+                panelTopMenu.BackColor = Color.SlateGray;
 
+                btnColor.BackColor = Color.SteelBlue;
+                btnFont.BackColor = Color.SteelBlue;
                 btnVelocity.BackColor = Color.SteelBlue;
                 btnDistance.BackColor = Color.SteelBlue;
                 btnTemperature.BackColor = Color.SteelBlue;
@@ -208,8 +214,20 @@ namespace AstroClient48
 
         }
 
-        private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbLanguage_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            if (cmbLanguage.SelectedItem.ToString() == "English")
+            {
+                picFlag.Image = Properties.Resources.UK;
+            }
+            if (cmbLanguage.SelectedItem.ToString() == "French")
+            {
+                picFlag.Image = Properties.Resources.French;
+            }
+            if (cmbLanguage.SelectedItem.ToString() == "German")
+            {
+                picFlag.Image = Properties.Resources.German;
+            }
 
         }
     }

@@ -349,6 +349,8 @@ namespace AstroClient48
             this.cmbLanguage.Name = "cmbLanguage";
             this.cmbLanguage.Size = new System.Drawing.Size(167, 23);
             this.cmbLanguage.TabIndex = 1;
+            this.cmbLanguage.Text = "English";
+            this.cmbLanguage.SelectedIndexChanged += new System.EventHandler(this.cmbLanguage_SelectedIndexChanged_1);
             // 
             // cmbTheme
             // 
@@ -405,22 +407,24 @@ namespace AstroClient48
             // 
             // btnColor
             // 
+            this.btnColor.BackColor = System.Drawing.SystemColors.Info;
             this.btnColor.Location = new System.Drawing.Point(489, 28);
             this.btnColor.Name = "btnColor";
             this.btnColor.Size = new System.Drawing.Size(151, 26);
             this.btnColor.TabIndex = 9;
             this.btnColor.Text = "Select Color";
-            this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.UseVisualStyleBackColor = false;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnFont
             // 
+            this.btnFont.BackColor = System.Drawing.SystemColors.Info;
             this.btnFont.Location = new System.Drawing.Point(655, 28);
             this.btnFont.Name = "btnFont";
             this.btnFont.Size = new System.Drawing.Size(151, 26);
             this.btnFont.TabIndex = 10;
             this.btnFont.Text = "Select Font";
-            this.btnFont.UseVisualStyleBackColor = true;
+            this.btnFont.UseVisualStyleBackColor = false;
             this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
             // 
             // picFlag
@@ -429,6 +433,7 @@ namespace AstroClient48
             this.picFlag.Location = new System.Drawing.Point(12, 7);
             this.picFlag.Name = "picFlag";
             this.picFlag.Size = new System.Drawing.Size(100, 50);
+            this.picFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFlag.TabIndex = 44;
             this.picFlag.TabStop = false;
             // 
