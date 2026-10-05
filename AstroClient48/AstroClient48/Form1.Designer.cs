@@ -130,7 +130,7 @@ namespace AstroClient48
             this.btnVelocity.Name = "btnVelocity";
             this.btnVelocity.Size = new System.Drawing.Size(169, 25);
             this.btnVelocity.TabIndex = 18;
-            this.btnVelocity.Text = "Calulate Velocity";
+            this.btnVelocity.Text = "Calculate Velocity";
             this.btnVelocity.UseVisualStyleBackColor = false;
             this.btnVelocity.Click += new System.EventHandler(this.btnVelocity_Click);
             // 
@@ -236,7 +236,7 @@ namespace AstroClient48
             this.btnDistance.Name = "btnDistance";
             this.btnDistance.Size = new System.Drawing.Size(169, 25);
             this.btnDistance.TabIndex = 30;
-            this.btnDistance.Text = "Calulate Distance";
+            this.btnDistance.Text = "Calculate Distance";
             this.btnDistance.UseVisualStyleBackColor = false;
             this.btnDistance.Click += new System.EventHandler(this.btnDistance_Click);
             // 
@@ -247,7 +247,7 @@ namespace AstroClient48
             this.btnTemperature.Name = "btnTemperature";
             this.btnTemperature.Size = new System.Drawing.Size(169, 25);
             this.btnTemperature.TabIndex = 31;
-            this.btnTemperature.Text = "Calulate Temperature";
+            this.btnTemperature.Text = "Calculate Temperature";
             this.btnTemperature.UseVisualStyleBackColor = false;
             this.btnTemperature.Click += new System.EventHandler(this.btnTemperature_Click);
             // 
@@ -258,7 +258,7 @@ namespace AstroClient48
             this.btnEventHorizon.Name = "btnEventHorizon";
             this.btnEventHorizon.Size = new System.Drawing.Size(169, 25);
             this.btnEventHorizon.TabIndex = 32;
-            this.btnEventHorizon.Text = "Calulate Horizon";
+            this.btnEventHorizon.Text = "Calculate Horizon";
             this.btnEventHorizon.UseVisualStyleBackColor = false;
             this.btnEventHorizon.Click += new System.EventHandler(this.btnEventHorizon_Click);
             // 

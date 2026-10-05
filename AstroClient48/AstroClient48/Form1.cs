@@ -24,6 +24,8 @@ namespace AstroClient48
             dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             picFlag.Image = Properties.Resources.UK;
+            cmbLanguage.SelectedIndex = 0;
+            cmbTheme.SelectedIndex = 0;
 
 
 
@@ -170,45 +172,40 @@ namespace AstroClient48
         private void cmbTheme_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            if (cmbTheme.SelectedItem.ToString() == "Default")
+            switch (cmbTheme.SelectedIndex)
             {
-                this.BackColor = SystemColors.Control;
+                case 0: // Default
+                    this.BackColor = SystemColors.Control;
+                    panelTopMenu.BackColor = SystemColors.GradientActiveCaption;
+                    btnColor.BackColor = SystemColors.Info;
+                    btnFont.BackColor = SystemColors.Info;
+                    btnVelocity.BackColor = SystemColors.Info;
+                    btnDistance.BackColor = SystemColors.Info;
+                    btnTemperature.BackColor = SystemColors.Info;
+                    btnEventHorizon.BackColor = SystemColors.Info;
+                    break;
 
-                panelTopMenu.BackColor = SystemColors.GradientActiveCaption;
+                case 1: //Light
+                    this.BackColor = Color.Beige;
+                    panelTopMenu.BackColor = Color.Bisque;
+                    btnColor.BackColor = Color.LightBlue;
+                    btnFont.BackColor = Color.LightBlue;
+                    btnVelocity.BackColor = Color.LightBlue;
+                    btnDistance.BackColor = Color.LightBlue;
+                    btnTemperature.BackColor = Color.LightBlue;
+                    btnEventHorizon.BackColor = Color.LightBlue;
+                    break;
 
-                btnColor.BackColor = SystemColors.Info;
-                btnFont.BackColor = SystemColors.Info;
-                btnVelocity.BackColor = SystemColors.Info;
-                btnDistance.BackColor = SystemColors.Info;
-                btnTemperature.BackColor = SystemColors.Info;
-                btnEventHorizon.BackColor = SystemColors.Info;
-
-            }
-            if (cmbTheme.SelectedItem.ToString() == "Light") 
-            { 
-                this.BackColor = Color.Beige;
-
-                panelTopMenu.BackColor = Color.Bisque;
-
-                btnColor.BackColor = Color.LightBlue;
-                btnFont.BackColor = Color.LightBlue;
-                btnVelocity.BackColor = Color.LightBlue;
-                btnDistance.BackColor = Color.LightBlue;
-                btnTemperature.BackColor = Color.LightBlue;
-                btnEventHorizon.BackColor = Color.LightBlue;
-
-            }
-            if (cmbTheme.SelectedItem.ToString() == "Dark")
-            {
-                this.BackColor = Color.DarkGray;
-                panelTopMenu.BackColor = Color.SlateGray;
-
-                btnColor.BackColor = Color.SteelBlue;
-                btnFont.BackColor = Color.SteelBlue;
-                btnVelocity.BackColor = Color.SteelBlue;
-                btnDistance.BackColor = Color.SteelBlue;
-                btnTemperature.BackColor = Color.SteelBlue;
-                btnEventHorizon.BackColor = Color.SteelBlue;
+                case 2: //Dark
+                    this.BackColor = Color.DarkGray;
+                    panelTopMenu.BackColor = Color.SlateGray;
+                    btnColor.BackColor = Color.SteelBlue;
+                    btnFont.BackColor = Color.SteelBlue;
+                    btnVelocity.BackColor = Color.SteelBlue;
+                    btnDistance.BackColor = Color.SteelBlue;
+                    btnTemperature.BackColor = Color.SteelBlue;
+                    btnEventHorizon.BackColor = Color.SteelBlue;
+                    break;
 
             }
 
@@ -216,17 +213,17 @@ namespace AstroClient48
 
         private void cmbLanguage_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (cmbLanguage.SelectedItem.ToString() == "English")
-            {
-                picFlag.Image = Properties.Resources.UK;
-            }
-            if (cmbLanguage.SelectedItem.ToString() == "French")
-            {
-                picFlag.Image = Properties.Resources.French;
-            }
-            if (cmbLanguage.SelectedItem.ToString() == "German")
-            {
-                picFlag.Image = Properties.Resources.German;
+            switch (cmbLanguage.SelectedIndex)
+            { 
+                case 0: //English
+                    picFlag.Image = Properties.Resources.UK;
+                    break;
+                case 1: //French
+                    picFlag.Image = Properties.Resources.French;
+                    break;
+                case 2: //German
+                    picFlag.Image = Properties.Resources.German;
+                    break;
             }
 
         }
