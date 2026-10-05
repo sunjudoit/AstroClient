@@ -444,7 +444,7 @@ namespace AstroClient48
             this.lblServerStatus.Name = "lblServerStatus";
             this.lblServerStatus.Size = new System.Drawing.Size(131, 20);
             this.lblServerStatus.TabIndex = 45;
-            this.lblServerStatus.Text = "Ｓｅｒｖｅｒ：　ｏｎ";
+            this.lblServerStatus.Text = "SERVER : OFF";
             // 
             // label7
             // 

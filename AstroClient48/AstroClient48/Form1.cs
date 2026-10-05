@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,7 @@ namespace AstroClient48
             cmbLanguage.SelectedIndex = 0;
             cmbTheme.SelectedIndex = 0;
 
+            CheckServerConnection();
 
 
         }
@@ -226,6 +228,28 @@ namespace AstroClient48
                     break;
             }
 
+        }
+
+        private void CheckServerConnection()
+        {
+            try
+            {
+                IAstroContract channeling = contract();
+                ICommunicationObject communication = (ICommunicationObject)channeling;
+
+                communication.Open();
+
+                lblServerStatus.Text = "SERVER : ON";
+                lblServerStatus.ForeColor = Color.Green;
+
+                communication.Close();
+
+            }
+            catch 
+            {
+                lblServerStatus.Text = "SERVER : OFF";
+                lblServerStatus.ForeColor = Color.Red;
+            }
         }
     }
 }
