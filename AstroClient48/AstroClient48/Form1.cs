@@ -7,6 +7,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -219,15 +220,23 @@ namespace AstroClient48
             { 
                 case 0: //English
                     picFlag.Image = Properties.Resources.UK;
+                    ChangeLanguage("en-GB");
                     break;
                 case 1: //French
                     picFlag.Image = Properties.Resources.French;
+                    ChangeLanguage("fr-FR");
                     break;
                 case 2: //German
                     picFlag.Image = Properties.Resources.German;
+                    ChangeLanguage("de-DE");
                     break;
             }
 
+        }
+
+        private void ChangeLanguage(string culture)
+        { 
+            
         }
 
         private void CheckServerConnection()

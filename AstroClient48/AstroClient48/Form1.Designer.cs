@@ -33,6 +33,7 @@ namespace AstroClient48
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,394 +71,250 @@ namespace AstroClient48
             this.label5 = new System.Windows.Forms.Label();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnFont = new System.Windows.Forms.Button();
-            this.picFlag = new System.Windows.Forms.PictureBox();
             this.lblServerStatus = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panelTopMenu = new System.Windows.Forms.Panel();
+            this.picFlag = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
             this.panelTopMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(306, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Astronomical Processing";
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(87, 126);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 23);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Star Velocity";
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(495, 127);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 23);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Temperature Conversion";
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(739, 127);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 23);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Event Horizon";
             // 
             // txtVelocityResult
             // 
-            this.txtVelocityResult.Location = new System.Drawing.Point(50, 284);
+            resources.ApplyResources(this.txtVelocityResult, "txtVelocityResult");
             this.txtVelocityResult.Name = "txtVelocityResult";
-            this.txtVelocityResult.Size = new System.Drawing.Size(167, 22);
-            this.txtVelocityResult.TabIndex = 17;
             // 
             // btnVelocity
             // 
+            resources.ApplyResources(this.btnVelocity, "btnVelocity");
             this.btnVelocity.BackColor = System.Drawing.SystemColors.Info;
-            this.btnVelocity.Location = new System.Drawing.Point(48, 235);
             this.btnVelocity.Name = "btnVelocity";
-            this.btnVelocity.Size = new System.Drawing.Size(169, 25);
-            this.btnVelocity.TabIndex = 18;
-            this.btnVelocity.Text = "Calculate Velocity";
             this.btnVelocity.UseVisualStyleBackColor = false;
             this.btnVelocity.Click += new System.EventHandler(this.btnVelocity_Click);
             // 
             // txtObservedWavelength
             // 
-            this.txtObservedWavelength.Location = new System.Drawing.Point(49, 166);
+            resources.ApplyResources(this.txtObservedWavelength, "txtObservedWavelength");
             this.txtObservedWavelength.Name = "txtObservedWavelength";
-            this.txtObservedWavelength.Size = new System.Drawing.Size(164, 22);
-            this.txtObservedWavelength.TabIndex = 19;
             // 
             // txtRestWavelength
             // 
-            this.txtRestWavelength.Location = new System.Drawing.Point(50, 207);
+            resources.ApplyResources(this.txtRestWavelength, "txtRestWavelength");
             this.txtRestWavelength.Name = "txtRestWavelength";
-            this.txtRestWavelength.Size = new System.Drawing.Size(164, 22);
-            this.txtRestWavelength.TabIndex = 20;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(52, 149);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(142, 15);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Observed Wavelength (nm)";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(53, 189);
+            resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 15);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Rest Wavelength (nm)";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(50, 266);
+            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 15);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Result (m/s)";
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(272, 149);
+            resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(121, 15);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Parallax Angle (arcsec)";
             // 
             // txtParallaxAngle
             // 
-            this.txtParallaxAngle.Location = new System.Drawing.Point(269, 166);
+            resources.ApplyResources(this.txtParallaxAngle, "txtParallaxAngle");
             this.txtParallaxAngle.Name = "txtParallaxAngle";
-            this.txtParallaxAngle.Size = new System.Drawing.Size(164, 22);
-            this.txtParallaxAngle.TabIndex = 24;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(493, 149);
+            resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(90, 15);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Temperature (C)";
             // 
             // txtCelsius
             // 
-            this.txtCelsius.Location = new System.Drawing.Point(490, 166);
+            resources.ApplyResources(this.txtCelsius, "txtCelsius");
             this.txtCelsius.Name = "txtCelsius";
-            this.txtCelsius.Size = new System.Drawing.Size(164, 22);
-            this.txtCelsius.TabIndex = 26;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(710, 147);
+            resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 15);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "Mass (kg)";
             // 
             // txtMass
             // 
-            this.txtMass.Location = new System.Drawing.Point(707, 164);
+            resources.ApplyResources(this.txtMass, "txtMass");
             this.txtMass.Name = "txtMass";
-            this.txtMass.Size = new System.Drawing.Size(164, 22);
-            this.txtMass.TabIndex = 28;
             // 
             // btnDistance
             // 
+            resources.ApplyResources(this.btnDistance, "btnDistance");
             this.btnDistance.BackColor = System.Drawing.SystemColors.Info;
-            this.btnDistance.Location = new System.Drawing.Point(264, 235);
             this.btnDistance.Name = "btnDistance";
-            this.btnDistance.Size = new System.Drawing.Size(169, 25);
-            this.btnDistance.TabIndex = 30;
-            this.btnDistance.Text = "Calculate Distance";
             this.btnDistance.UseVisualStyleBackColor = false;
             this.btnDistance.Click += new System.EventHandler(this.btnDistance_Click);
             // 
             // btnTemperature
             // 
+            resources.ApplyResources(this.btnTemperature, "btnTemperature");
             this.btnTemperature.BackColor = System.Drawing.SystemColors.Info;
-            this.btnTemperature.Location = new System.Drawing.Point(490, 235);
             this.btnTemperature.Name = "btnTemperature";
-            this.btnTemperature.Size = new System.Drawing.Size(169, 25);
-            this.btnTemperature.TabIndex = 31;
-            this.btnTemperature.Text = "Calculate Temperature";
             this.btnTemperature.UseVisualStyleBackColor = false;
             this.btnTemperature.Click += new System.EventHandler(this.btnTemperature_Click);
             // 
             // btnEventHorizon
             // 
+            resources.ApplyResources(this.btnEventHorizon, "btnEventHorizon");
             this.btnEventHorizon.BackColor = System.Drawing.SystemColors.Info;
-            this.btnEventHorizon.Location = new System.Drawing.Point(701, 235);
             this.btnEventHorizon.Name = "btnEventHorizon";
-            this.btnEventHorizon.Size = new System.Drawing.Size(169, 25);
-            this.btnEventHorizon.TabIndex = 32;
-            this.btnEventHorizon.Text = "Calculate Horizon";
             this.btnEventHorizon.UseVisualStyleBackColor = false;
             this.btnEventHorizon.Click += new System.EventHandler(this.btnEventHorizon_Click);
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(266, 266);
+            resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(98, 15);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "Distance (parsecs)";
             // 
             // txtDistanceResult
             // 
-            this.txtDistanceResult.Location = new System.Drawing.Point(266, 284);
+            resources.ApplyResources(this.txtDistanceResult, "txtDistanceResult");
             this.txtDistanceResult.Name = "txtDistanceResult";
-            this.txtDistanceResult.Size = new System.Drawing.Size(167, 22);
-            this.txtDistanceResult.TabIndex = 33;
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(493, 266);
+            resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(90, 15);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Temperature (K)";
             // 
             // txtKelvinResult
             // 
-            this.txtKelvinResult.Location = new System.Drawing.Point(493, 284);
+            resources.ApplyResources(this.txtKelvinResult, "txtKelvinResult");
             this.txtKelvinResult.Name = "txtKelvinResult";
-            this.txtKelvinResult.Size = new System.Drawing.Size(167, 22);
-            this.txtKelvinResult.TabIndex = 35;
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(701, 266);
+            resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(99, 15);
-            this.label18.TabIndex = 38;
-            this.label18.Text = "Event Horizon (m)";
             // 
             // txtEventHorizonResult
             // 
-            this.txtEventHorizonResult.Location = new System.Drawing.Point(701, 284);
+            resources.ApplyResources(this.txtEventHorizonResult, "txtEventHorizonResult");
             this.txtEventHorizonResult.Name = "txtEventHorizonResult";
-            this.txtEventHorizonResult.Size = new System.Drawing.Size(167, 22);
-            this.txtEventHorizonResult.TabIndex = 37;
             // 
             // label19
             // 
-            this.label19.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(401, 317);
+            resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(140, 23);
-            this.label19.TabIndex = 39;
-            this.label19.Text = "Calculation History";
             // 
             // dgvHistory
             // 
+            resources.ApplyResources(this.dgvHistory, "dgvHistory");
             this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistory.Location = new System.Drawing.Point(50, 343);
             this.dgvHistory.Name = "dgvHistory";
-            this.dgvHistory.Size = new System.Drawing.Size(829, 117);
-            this.dgvHistory.TabIndex = 40;
             // 
             // lblError
             // 
-            this.lblError.Location = new System.Drawing.Point(49, 472);
+            resources.ApplyResources(this.lblError, "lblError");
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(828, 22);
-            this.lblError.TabIndex = 41;
-            this.lblError.Text = "Error Message";
             // 
             // cmbLanguage
             // 
+            resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.FormattingEnabled = true;
             this.cmbLanguage.Items.AddRange(new object[] {
-            "English",
-            "French",
-            "German"});
-            this.cmbLanguage.Location = new System.Drawing.Point(127, 31);
+            resources.GetString("cmbLanguage.Items"),
+            resources.GetString("cmbLanguage.Items1"),
+            resources.GetString("cmbLanguage.Items2")});
             this.cmbLanguage.Name = "cmbLanguage";
-            this.cmbLanguage.Size = new System.Drawing.Size(167, 23);
-            this.cmbLanguage.TabIndex = 1;
-            this.cmbLanguage.Text = "English";
             this.cmbLanguage.SelectedIndexChanged += new System.EventHandler(this.cmbLanguage_SelectedIndexChanged_1);
             // 
             // cmbTheme
             // 
+            resources.ApplyResources(this.cmbTheme, "cmbTheme");
             this.cmbTheme.FormattingEnabled = true;
             this.cmbTheme.Items.AddRange(new object[] {
-            "Default",
-            "Light",
-            "Dark"});
-            this.cmbTheme.Location = new System.Drawing.Point(310, 31);
+            resources.GetString("cmbTheme.Items"),
+            resources.GetString("cmbTheme.Items1"),
+            resources.GetString("cmbTheme.Items2")});
             this.cmbTheme.Name = "cmbTheme";
-            this.cmbTheme.Size = new System.Drawing.Size(164, 23);
-            this.cmbTheme.TabIndex = 2;
             this.cmbTheme.SelectedIndexChanged += new System.EventHandler(this.cmbTheme_SelectedIndexChanged);
             // 
             // label2
             // 
+            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(149, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 23);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Language and Layout ";
             // 
             // label3
             // 
+            resources.ApplyResources(this.label3, "label3");
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(371, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 23);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Theme";
             // 
             // label4
             // 
+            resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(527, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 23);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Color Dialog";
             // 
             // label5
             // 
+            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(699, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 23);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Font Dialog";
             // 
             // btnColor
             // 
+            resources.ApplyResources(this.btnColor, "btnColor");
             this.btnColor.BackColor = System.Drawing.SystemColors.Info;
-            this.btnColor.Location = new System.Drawing.Point(489, 28);
             this.btnColor.Name = "btnColor";
-            this.btnColor.Size = new System.Drawing.Size(151, 26);
-            this.btnColor.TabIndex = 9;
-            this.btnColor.Text = "Select Color";
             this.btnColor.UseVisualStyleBackColor = false;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnFont
             // 
+            resources.ApplyResources(this.btnFont, "btnFont");
             this.btnFont.BackColor = System.Drawing.SystemColors.Info;
-            this.btnFont.Location = new System.Drawing.Point(655, 28);
             this.btnFont.Name = "btnFont";
-            this.btnFont.Size = new System.Drawing.Size(151, 26);
-            this.btnFont.TabIndex = 10;
-            this.btnFont.Text = "Select Font";
             this.btnFont.UseVisualStyleBackColor = false;
             this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
             // 
-            // picFlag
-            // 
-            this.picFlag.BackColor = System.Drawing.Color.Transparent;
-            this.picFlag.Location = new System.Drawing.Point(12, 7);
-            this.picFlag.Name = "picFlag";
-            this.picFlag.Size = new System.Drawing.Size(100, 50);
-            this.picFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFlag.TabIndex = 44;
-            this.picFlag.TabStop = false;
-            // 
             // lblServerStatus
             // 
-            this.lblServerStatus.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServerStatus.Location = new System.Drawing.Point(737, 24);
+            resources.ApplyResources(this.lblServerStatus, "lblServerStatus");
             this.lblServerStatus.Name = "lblServerStatus";
-            this.lblServerStatus.Size = new System.Drawing.Size(131, 20);
-            this.lblServerStatus.TabIndex = 45;
-            this.lblServerStatus.Text = "SERVER : OFF";
             // 
             // label7
             // 
+            resources.ApplyResources(this.label7, "label7");
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(304, 126);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 23);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Star Distance";
             // 
             // panelTopMenu
             // 
+            resources.ApplyResources(this.panelTopMenu, "panelTopMenu");
             this.panelTopMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panelTopMenu.Controls.Add(this.picFlag);
             this.panelTopMenu.Controls.Add(this.btnFont);
@@ -468,16 +325,19 @@ namespace AstroClient48
             this.panelTopMenu.Controls.Add(this.label2);
             this.panelTopMenu.Controls.Add(this.cmbTheme);
             this.panelTopMenu.Controls.Add(this.cmbLanguage);
-            this.panelTopMenu.Location = new System.Drawing.Point(48, 47);
             this.panelTopMenu.Name = "panelTopMenu";
-            this.panelTopMenu.Size = new System.Drawing.Size(830, 67);
-            this.panelTopMenu.TabIndex = 47;
+            // 
+            // picFlag
+            // 
+            resources.ApplyResources(this.picFlag, "picFlag");
+            this.picFlag.BackColor = System.Drawing.Color.Transparent;
+            this.picFlag.Name = "picFlag";
+            this.picFlag.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 508);
             this.Controls.Add(this.panelTopMenu);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblServerStatus);
@@ -510,12 +370,10 @@ namespace AstroClient48
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Perpetua Titling MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
-            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
             this.panelTopMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
