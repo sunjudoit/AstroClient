@@ -19,13 +19,20 @@ namespace AstroClient48
     {
         private bool isChanging = false;
 
+        // Language combo button menu
         private string[] languageEN = { "English", "French", "German" };
         private string[] languageFR = { "Anglais", "Français", "Allemand" };
         private string[] languageDE = { "Englisch", "Französisch", "Deutsch" };
 
+        //Theme combo button menu
         private string[] themeEN = { "Default", "Light", "Dark" };
         private string[] themeFR = { "Par défaut", "Clair", "Sombre" };
         private string[] themeDE = { "Standard", "Hell", "Dunkel" };
+
+        // Grid history language
+        private string[] calculateEN = { "Star Velocity", "Star Distance", "Temperature Conversion", "Event Horizon" };
+        private string[] calculateFR = { "Vitesse stellaire", "Distance stellaire", "Conversion de température", "Horizon des événements" };
+        private string[] calculateDE = { "Sterngeschwindigkeit", "Sternentfernung", "Temperaturumrechnung", "Ereignishorizont" };
 
         public Form1()
         {
@@ -73,11 +80,12 @@ namespace AstroClient48
 
                 txtVelocityResult.Text = velocityResult.ToString("F2");
 
-                dgvHistory.Rows.Add(
-                    "Star Velocity",
+                int rowIndex = dgvHistory.Rows.Add(
+                    GetClaculateculture()[0],
                     observedWavelength + "nm," + restWavelength + "nm",
                     velocityResult.ToString("F2") + "m/s"
                     );
+                dgvHistory.Rows[rowIndex].Tag = 0;
             }
             catch (Exception ex)
             {
@@ -98,11 +106,12 @@ namespace AstroClient48
 
                 txtDistanceResult.Text = distanceResult.ToString("F2");
 
-                dgvHistory.Rows.Add(
-                    "Star Distance",
+                int rowIndex = dgvHistory.Rows.Add(
+                    GetClaculateculture()[1],
                     parallaxAngle + "arcsec",
                     distanceResult.ToString("F2") + "parsecs"
                     );
+                dgvHistory.Rows[rowIndex].Tag = 1;
             }
             catch (Exception ex)
             {
@@ -122,11 +131,12 @@ namespace AstroClient48
 
                 txtKelvinResult.Text = kelvinResult.ToString("F2");
 
-                dgvHistory.Rows.Add(
-                    "Temperature Conversion",
+                int rowIndex = dgvHistory.Rows.Add(
+                    GetClaculateculture()[2],
                     celsius + "C",
                     kelvinResult.ToString("F2") + "K"
                     );
+                dgvHistory.Rows[rowIndex].Tag = 2;
 
             }
             catch (Exception ex)
@@ -148,11 +158,12 @@ namespace AstroClient48
 
                 txtEventHorizonResult.Text = horizonResult.ToString("E4");
 
-                dgvHistory.Rows.Add(
-                    "Event Horizon",
+                int rowIndex = dgvHistory.Rows.Add(
+                    GetClaculateculture()[3],
                     mass + "kg",
                     horizonResult.ToString("E4") + "m"
                     );
+                dgvHistory.Rows[rowIndex].Tag = 3;
 
             }
             catch (Exception ex)
@@ -283,22 +294,46 @@ namespace AstroClient48
             {
                 cmbLanguage.Items.AddRange(languageEN);
                 cmbTheme.Items.AddRange(themeEN);
+
+                dgvHistory.Columns[0].HeaderText ="Calculation";
+                dgvHistory.Columns[1].HeaderText = "Input";
+                dgvHistory.Columns[2].HeaderText = "Result";
+
             }
             else if (culture == "fr-FR")
             {
                 cmbLanguage.Items.AddRange(languageFR);
                 cmbTheme.Items.AddRange(themeFR);
+
+                dgvHistory.Columns[0].HeaderText = "Calcul";
+                dgvHistory.Columns[1].HeaderText = "Entrée";
+                dgvHistory.Columns[2].HeaderText = "Résultat";
+
             }
             else if (culture == "de-DE")
             {
                 cmbLanguage.Items.AddRange(languageDE);
                 cmbTheme.Items.AddRange(themeDE);
+
+                dgvHistory.Columns[0].HeaderText = "Berechnung";
+                dgvHistory.Columns[1].HeaderText = "Eingabe";
+                dgvHistory.Columns[2].HeaderText = "Ergebnis";
             }
 
 
             // Restore saved values
             this.Font = font;
             cmbLanguage.SelectedIndex = languageIndex;
+
+            foreach(DataGridViewRow row in dgvHistory.Rows)
+            {
+                if (row.Tag != null)
+                {
+                    int claType = (int)row.Tag;
+                    row.Cells[0].Value = GetClaculateculture()[claType];
+                }
+            }
+
             cmbTheme.SelectedIndex = themeIndex;
 
             //
@@ -306,6 +341,21 @@ namespace AstroClient48
 
             isChanging = false;
         }
+
+        private string[] GetClaculateculture()
+        {
+            
+            if (cmbLanguage.SelectedIndex == 1) 
+                return calculateFR;
+            if (cmbLanguage.SelectedIndex == 2)
+                return calculateDE;
+
+            return calculateEN;
+
+        }
+
+
+
         private void TranslatorControls(ComponentResourceManager resources, Control parent)
         {
             foreach (Control control in parent.Controls)
