@@ -121,6 +121,10 @@
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>363, 45</value>
+  </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Astronomische Verarbeitung</value>
   </data>
@@ -151,7 +155,6 @@
   <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 15</value>
   </data>
@@ -257,8 +260,26 @@
   <data name="lblError.Text" xml:space="preserve">
     <value>FEHLERMELDUNG</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="cmbLanguage.Items" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
+  <data name="cmbLanguage.Items1" xml:space="preserve">
+    <value>Französisch</value>
+  </data>
+  <data name="cmbLanguage.Items2" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="cmbLanguage.Text" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
+  <data name="cmbTheme.Items" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="cmbTheme.Items1" xml:space="preserve">
+    <value>Hell</value>
+  </data>
+  <data name="cmbTheme.Items2" xml:space="preserve">
+    <value>Dunkel</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Sprache und Layout</value>
@@ -303,9 +324,6 @@
     <value>Sternentfernung</value>
   </data>
   <data name="picFlag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
 </root>

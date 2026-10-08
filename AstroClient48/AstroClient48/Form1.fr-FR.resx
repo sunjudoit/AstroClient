@@ -251,6 +251,27 @@
   <data name="lblError.Text" xml:space="preserve">
     <value>MESSAGE D'ERREUR</value>
   </data>
+  <data name="cmbLanguage.Items" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="cmbLanguage.Items1" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="cmbLanguage.Items2" xml:space="preserve">
+    <value>Allemand</value>
+  </data>
+  <data name="cmbLanguage.Text" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="cmbTheme.Items" xml:space="preserve">
+    <value>Par défaut</value>
+  </data>
+  <data name="cmbTheme.Items1" xml:space="preserve">
+    <value>Clair</value>
+  </data>
+  <data name="cmbTheme.Items2" xml:space="preserve">
+    <value>Sombre</value>
+  </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>

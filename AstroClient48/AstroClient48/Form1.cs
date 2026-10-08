@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +17,16 @@ namespace AstroClient48
 {
     public partial class Form1 : Form
     {
+        private bool isChanging = false;
+
+        private string[] languageEN = { "English", "French", "German" };
+        private string[] languageFR = { "Anglais", "Français", "Allemand" };
+        private string[] languageDE = { "Englisch", "Französisch", "Deutsch" };
+
+        private string[] themeEN = { "Default", "Light", "Dark" };
+        private string[] themeFR = { "Par défaut", "Clair", "Sombre" };
+        private string[] themeDE = { "Standard", "Hell", "Dunkel" };
+
         public Form1()
         {
             InitializeComponent();
@@ -167,7 +179,18 @@ namespace AstroClient48
 
             if (result == DialogResult.OK)
             {
-                this.Font = fontDialog.Font;
+                ApplyFont(this, fontDialog.Font);
+            }
+
+        }
+
+        private void ApplyFont(Control parent, Font selectedFont)
+        { 
+            parent.Font = selectedFont;
+
+            foreach (Control control in parent.Controls)
+            {
+                ApplyFont(control, selectedFont);
             }
 
         }
@@ -216,6 +239,8 @@ namespace AstroClient48
 
         private void cmbLanguage_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            if (isChanging) return;
+
             switch (cmbLanguage.SelectedIndex)
             { 
                 case 0: //English
@@ -235,8 +260,64 @@ namespace AstroClient48
         }
 
         private void ChangeLanguage(string culture)
-        { 
-            
+        {
+            //
+            isChanging = true;
+
+            //Save values that should not be overwritten
+            Font font = this.Font;
+            int languageIndex = cmbLanguage.SelectedIndex;
+            int themeIndex = cmbTheme.SelectedIndex;
+
+            //Apply translation
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(Form1));
+            resources.ApplyResources(this, "$this");
+            TranslatorControls(resources, this);
+
+            //language combobox
+            cmbLanguage.Items.Clear();         
+            cmbTheme.Items.Clear();
+
+            if (culture == "en-GB")
+            {
+                cmbLanguage.Items.AddRange(languageEN);
+                cmbTheme.Items.AddRange(themeEN);
+            }
+            else if (culture == "fr-FR")
+            {
+                cmbLanguage.Items.AddRange(languageFR);
+                cmbTheme.Items.AddRange(themeFR);
+            }
+            else if (culture == "de-DE")
+            {
+                cmbLanguage.Items.AddRange(languageDE);
+                cmbTheme.Items.AddRange(themeDE);
+            }
+
+
+            // Restore saved values
+            this.Font = font;
+            cmbLanguage.SelectedIndex = languageIndex;
+            cmbTheme.SelectedIndex = themeIndex;
+
+            //
+            CheckServerConnection();
+
+            isChanging = false;
+        }
+        private void TranslatorControls(ComponentResourceManager resources, Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (!(control is TextBox))
+                {
+                    resources.ApplyResources(control, control.Name);
+                }
+
+                TranslatorControls(resources, control);
+
+            }
         }
 
         private void CheckServerConnection()
