@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Text;
@@ -71,25 +72,38 @@ namespace AstroClient48
             try
             {
 
-                double observedWavelength = double.Parse(txtObservedWavelength.Text);
-                double restWavelength = double.Parse(txtRestWavelength.Text);
-
+                if (!double.TryParse(txtObservedWavelength.Text, out double observedWavelength))
+                {
+                    MessageBox.Show("Please enter a valid value");
+                    return;
+                }
+                if (!double.TryParse(txtRestWavelength.Text, out double restWavelength))
+                {
+                    MessageBox.Show("Please enter a valid value");
+                    return;
+                }
+                
+               
                 IAstroContract channeling = contract();
 
                 double velocityResult = channeling.StarVelocity(observedWavelength, restWavelength);
 
-                txtVelocityResult.Text = velocityResult.ToString("F2");
+                txtVelocityResult.Text = velocityResult.ToString("E4");
 
                 int rowIndex = dgvHistory.Rows.Add(
                     GetClaculateculture()[0],
                     observedWavelength + "nm," + restWavelength + "nm",
-                    velocityResult.ToString("F2") + "m/s"
+                    velocityResult.ToString("E4") + "m/s"
                     );
                 dgvHistory.Rows[rowIndex].Tag = 0;
+
+                lblError.Text = "Calculation completed successfully.";
+                lblError.ForeColor = Color.Green;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                lblError.Text = "Error: " + ex.Message;
+                lblError.ForeColor = Color.Red;
             }
 
         }
@@ -98,24 +112,33 @@ namespace AstroClient48
         {
             try
             {
-                double parallaxAngle = double.Parse(txtParallaxAngle.Text);
+                if (!double.TryParse(txtParallaxAngle.Text, out double parallaxAngle))
+                {
+                    MessageBox.Show("Please enter a valid value.");
+                    return;
+                }
 
                 IAstroContract channeling = contract();
 
                 double distanceResult = channeling.StarDistance(parallaxAngle);
 
-                txtDistanceResult.Text = distanceResult.ToString("F2");
+                txtDistanceResult.Text = distanceResult.ToString("E4");
 
                 int rowIndex = dgvHistory.Rows.Add(
                     GetClaculateculture()[1],
                     parallaxAngle + "arcsec",
-                    distanceResult.ToString("F2") + "parsecs"
+                    distanceResult.ToString("E4") + "parsecs"
                     );
                 dgvHistory.Rows[rowIndex].Tag = 1;
+
+                lblError.Text = "Calculation completed successfully.";
+                lblError.ForeColor = Color.Green;
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                lblError.Text = "Error: " + ex.Message;
+                lblError.ForeColor = Color.Red;
             }
         }
 
@@ -123,11 +146,25 @@ namespace AstroClient48
         {
             try
             {
-                double celsius = double.Parse(txtCelsius.Text);
+                if (!double.TryParse(txtCelsius.Text, out double celsius))
+                {
+                    MessageBox.Show("Please enter a valid value.");
+                    return;
+                }
+                if (celsius <= -273)
+                {
+                    MessageBox.Show("Temperature must be greater than -273°C.");
+                    return ;
+                }
 
                 IAstroContract channeling = contract();
 
                 double kelvinResult = channeling.CelsiusToKelvin(celsius);
+                if (kelvinResult <= 0)
+                {
+                    MessageBox.Show("Kelvin temperature must be greater than zero.");
+                    return;
+                }
 
                 txtKelvinResult.Text = kelvinResult.ToString("F2");
 
@@ -138,10 +175,14 @@ namespace AstroClient48
                     );
                 dgvHistory.Rows[rowIndex].Tag = 2;
 
+                lblError.Text = "Calculation completed successfully.";
+                lblError.ForeColor = Color.Green;
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                lblError.Text = "Error: " + ex.Message;
+                lblError.ForeColor = Color.Red;
             }
 
         }
@@ -150,7 +191,11 @@ namespace AstroClient48
         {
             try
             {
-                double mass = double.Parse(txtMass.Text);
+                if (!double.TryParse(txtMass.Text, out double mass))
+                {
+                    MessageBox.Show("Please enter a valid value.");
+                    return;
+                }
 
                 IAstroContract channeling = contract();
 
@@ -165,10 +210,14 @@ namespace AstroClient48
                     );
                 dgvHistory.Rows[rowIndex].Tag = 3;
 
+                lblError.Text = "Calculation completed successfully.";
+                lblError.ForeColor = Color.Green;
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                lblError.Text = "Error: " + ex.Message;
+                lblError.ForeColor = Color.Red;
             }
         }
 
@@ -354,8 +403,6 @@ namespace AstroClient48
 
         }
 
-
-
         private void TranslatorControls(ComponentResourceManager resources, Control parent)
         {
             foreach (Control control in parent.Controls)
@@ -385,11 +432,13 @@ namespace AstroClient48
                 communication.Close();
 
             }
-            catch 
+            catch
             {
                 lblServerStatus.Text = "SERVER : OFF";
                 lblServerStatus.ForeColor = Color.Red;
+
             }
+               
         }
     }
 }
