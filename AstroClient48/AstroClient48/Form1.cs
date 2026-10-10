@@ -35,6 +35,16 @@ namespace AstroClient48
         private string[] calculateFR = { "Vitesse stellaire", "Distance stellaire", "Conversion de température", "Horizon des événements" };
         private string[] calculateDE = { "Sterngeschwindigkeit", "Sternentfernung", "Temperaturumrechnung", "Ereignishorizont" };
 
+        //Server status :[0]on , [1]off
+        private string[] serverEN = { "SERVER : ON", "SERVER : OFF" };
+        private string[] serverFR = { "SERVEUR : ACTIF", "SERVEUR : INACTIF" };
+        private string[] serverDE = { "SERVER : AN", "SERVER : AUS" };
+
+        //Message box & Message Label text :[0] invalid value, [1]success ,[2]temperature range,[3] kelvin range,[4] Error
+        private string[] messageEN = { "Please enter a valid value." , "Calculation completed successfully." , "Temperature must be greater than -273°C.", "Kelvin temperature must be greater than zero." ,"Error:"};
+        private string[] messageFR = { "Veuillez entrer une valeur valide." , "Calcul terminé avec succès." , "La température doit être supérieure à -273°C.", "La température en Kelvin doit être supérieure à zéro." ,"Erreur :"};
+        private string[] messageDE = { "Bitte geben Sie einen gültigen Wert ein." ,"Berechnung erfolgreich abgeschlossen.","Die Temperatur muss größer als -273°C sein.", "Die Kelvin-Temperatur muss größer als null sein.", "Fehler: " };
+
         public Form1()
         {
             InitializeComponent();
@@ -74,12 +84,12 @@ namespace AstroClient48
 
                 if (!double.TryParse(txtObservedWavelength.Text, out double observedWavelength))
                 {
-                    MessageBox.Show("Please enter a valid value");
+                    MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
                 if (!double.TryParse(txtRestWavelength.Text, out double restWavelength))
                 {
-                    MessageBox.Show("Please enter a valid value");
+                    MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
                 
@@ -97,12 +107,12 @@ namespace AstroClient48
                     );
                 dgvHistory.Rows[rowIndex].Tag = 0;
 
-                lblError.Text = "Calculation completed successfully.";
+                lblError.Text = GetMessageculture()[1];
                 lblError.ForeColor = Color.Green;
             }
             catch (Exception ex)
             {
-                lblError.Text = "Error: " + ex.Message;
+                lblError.Text = GetMessageculture()[4] + ex.Message;
                 lblError.ForeColor = Color.Red;
             }
 
@@ -114,7 +124,7 @@ namespace AstroClient48
             {
                 if (!double.TryParse(txtParallaxAngle.Text, out double parallaxAngle))
                 {
-                    MessageBox.Show("Please enter a valid value.");
+                    MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
 
@@ -131,13 +141,13 @@ namespace AstroClient48
                     );
                 dgvHistory.Rows[rowIndex].Tag = 1;
 
-                lblError.Text = "Calculation completed successfully.";
+                lblError.Text = GetMessageculture()[1];
                 lblError.ForeColor = Color.Green;
 
             }
             catch (Exception ex)
             {
-                lblError.Text = "Error: " + ex.Message;
+                lblError.Text = GetMessageculture()[4] + ex.Message;
                 lblError.ForeColor = Color.Red;
             }
         }
@@ -148,12 +158,12 @@ namespace AstroClient48
             {
                 if (!double.TryParse(txtCelsius.Text, out double celsius))
                 {
-                    MessageBox.Show("Please enter a valid value.");
+                    MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
                 if (celsius <= -273)
                 {
-                    MessageBox.Show("Temperature must be greater than -273°C.");
+                    MessageBox.Show(GetMessageculture()[2]);
                     return ;
                 }
 
@@ -162,7 +172,7 @@ namespace AstroClient48
                 double kelvinResult = channeling.CelsiusToKelvin(celsius);
                 if (kelvinResult <= 0)
                 {
-                    MessageBox.Show("Kelvin temperature must be greater than zero.");
+                    MessageBox.Show(GetMessageculture()[3]);
                     return;
                 }
 
@@ -175,13 +185,13 @@ namespace AstroClient48
                     );
                 dgvHistory.Rows[rowIndex].Tag = 2;
 
-                lblError.Text = "Calculation completed successfully.";
+                lblError.Text = GetMessageculture()[1];
                 lblError.ForeColor = Color.Green;
 
             }
             catch (Exception ex)
             {
-                lblError.Text = "Error: " + ex.Message;
+                lblError.Text = GetMessageculture()[4] + ex.Message;
                 lblError.ForeColor = Color.Red;
             }
 
@@ -193,7 +203,7 @@ namespace AstroClient48
             {
                 if (!double.TryParse(txtMass.Text, out double mass))
                 {
-                    MessageBox.Show("Please enter a valid value.");
+                    MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
 
@@ -210,13 +220,13 @@ namespace AstroClient48
                     );
                 dgvHistory.Rows[rowIndex].Tag = 3;
 
-                lblError.Text = "Calculation completed successfully.";
+                lblError.Text = GetMessageculture()[1];
                 lblError.ForeColor = Color.Green;
 
             }
             catch (Exception ex)
             {
-                lblError.Text = "Error: " + ex.Message;
+                lblError.Text = GetMessageculture()[4] + ex.Message;
                 lblError.ForeColor = Color.Red;
             }
         }
@@ -403,6 +413,28 @@ namespace AstroClient48
 
         }
 
+        private string[] GetServerStatusculture()
+        {
+            if (cmbLanguage.SelectedIndex == 1)
+                return serverFR;
+            if (cmbLanguage.SelectedIndex == 2)
+                return serverDE;
+
+            return serverEN;
+        }
+
+        private string[] GetMessageculture()
+        {
+            if (cmbLanguage.SelectedIndex == 1)
+                return messageFR;
+            if (cmbLanguage.SelectedIndex == 2)
+                return messageDE;
+
+            return messageEN;
+        }
+
+
+
         private void TranslatorControls(ComponentResourceManager resources, Control parent)
         {
             foreach (Control control in parent.Controls)
@@ -426,7 +458,7 @@ namespace AstroClient48
 
                 communication.Open();
 
-                lblServerStatus.Text = "SERVER : ON";
+                lblServerStatus.Text = GetServerStatusculture()[0];
                 lblServerStatus.ForeColor = Color.Green;
 
                 communication.Close();
@@ -434,11 +466,13 @@ namespace AstroClient48
             }
             catch
             {
-                lblServerStatus.Text = "SERVER : OFF";
+                lblServerStatus.Text = GetServerStatusculture()[1];
                 lblServerStatus.ForeColor = Color.Red;
 
             }
                
         }
+
+
     }
 }
