@@ -18,19 +18,20 @@ namespace AstroClient48
 {
     public partial class Form1 : Form
     {
+        // Prevent language change events from running again
         private bool isChanging = false;
 
-        // Language combo button menu
+        // Language combo box items
         private string[] languageEN = { "English", "French", "German" };
         private string[] languageFR = { "Anglais", "Français", "Allemand" };
         private string[] languageDE = { "Englisch", "Französisch", "Deutsch" };
 
-        //Theme combo button menu
+        //Theme combo box items
         private string[] themeEN = { "Default", "Light", "Dark" };
         private string[] themeFR = { "Par défaut", "Clair", "Sombre" };
         private string[] themeDE = { "Standard", "Hell", "Dunkel" };
 
-        // Grid history language
+        // Calculation names for the history grid
         private string[] calculateEN = { "Star Velocity", "Star Distance", "Temperature Conversion", "Event Horizon" };
         private string[] calculateFR = { "Vitesse stellaire", "Distance stellaire", "Conversion de température", "Horizon des événements" };
         private string[] calculateDE = { "Sterngeschwindigkeit", "Sternentfernung", "Temperaturumrechnung", "Ereignishorizont" };
@@ -45,24 +46,38 @@ namespace AstroClient48
         private string[] messageFR = { "Veuillez entrer une valeur valide." , "Calcul terminé avec succès." , "La température doit être supérieure à -273°C.", "La température en Kelvin doit être supérieure à zéro." ,"Erreur :"};
         private string[] messageDE = { "Bitte geben Sie einen gültigen Wert ein." ,"Berechnung erfolgreich abgeschlossen.","Die Temperatur muss größer als -273°C sein.", "Die Kelvin-Temperatur muss größer als null sein.", "Fehler: " };
 
+        /// <summary>
+        /// Sets up the form when the program starts.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
 
+            // Add columns to the history Grid
             dgvHistory.Columns.Add("Calculation", "Calculation");
             dgvHistory.Columns.Add("Input", "Input");
             dgvHistory.Columns.Add("Result", "Result");
 
             dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            // Set the starting language and theme
             picFlag.Image = Properties.Resources.UK;
             cmbLanguage.SelectedIndex = 0;
             cmbTheme.SelectedIndex = 0;
 
+           // Set the history grid header color
+            dgvHistory.EnableHeadersVisualStyles = false;
+            dgvHistory.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+           
+
             CheckServerConnection();
 
-
         }
+
+        /// <summary>
+        ///  Creates a connection to the WCF server.
+        /// </summary>
+        ///  <returns>The server connection.</returns>
         private IAstroContract contract()
         {
             string localAddress = "net.pipe://localhost/AstroServer";
@@ -75,13 +90,17 @@ namespace AstroClient48
 
             return channeling;
         }
-       
 
+        /// <summary>
+        /// Calculates the velocity of a star using two wavelengths.
+        /// </summary>
+        /// <param name="sender">The button that was clicked.</param>
+        /// <param name="e">The click event.</param>
         private void btnVelocity_Click(object sender, EventArgs e)
         {
             try
             {
-
+                // Check the input values
                 if (!double.TryParse(txtObservedWavelength.Text, out double observedWavelength))
                 {
                     MessageBox.Show(GetMessageculture()[0]);
@@ -92,14 +111,15 @@ namespace AstroClient48
                     MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
-                
-               
+
+                // Send the values to the server
                 IAstroContract channeling = contract();
 
                 double velocityResult = channeling.StarVelocity(observedWavelength, restWavelength);
 
                 txtVelocityResult.Text = velocityResult.ToString("E4");
 
+                // Add the result to the history Grid
                 int rowIndex = dgvHistory.Rows.Add(
                     GetClaculateculture()[0],
                     observedWavelength + "nm," + restWavelength + "nm",
@@ -117,23 +137,30 @@ namespace AstroClient48
             }
 
         }
-
+        /// <summary>
+        /// Calculates the distance to a star using the parallax angle.
+        /// </summary>
+        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="e">The click event.</param>
         private void btnDistance_Click(object sender, EventArgs e)
         {
             try
             {
+                // Check the input values
                 if (!double.TryParse(txtParallaxAngle.Text, out double parallaxAngle))
                 {
                     MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
 
+                // Send the value to the server
                 IAstroContract channeling = contract();
 
                 double distanceResult = channeling.StarDistance(parallaxAngle);
 
                 txtDistanceResult.Text = distanceResult.ToString("E4");
 
+                // Add the result to the history Grid
                 int rowIndex = dgvHistory.Rows.Add(
                     GetClaculateculture()[1],
                     parallaxAngle + "arcsec",
@@ -152,10 +179,16 @@ namespace AstroClient48
             }
         }
 
+        /// <summary>
+        /// Converts Celsius to Kelvin.
+        /// </summary>
+        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="e">The click event.</param>
         private void btnTemperature_Click(object sender, EventArgs e)
         {
             try
             {
+                // Check the input values
                 if (!double.TryParse(txtCelsius.Text, out double celsius))
                 {
                     MessageBox.Show(GetMessageculture()[0]);
@@ -167,6 +200,7 @@ namespace AstroClient48
                     return ;
                 }
 
+                // Send the value to the server
                 IAstroContract channeling = contract();
 
                 double kelvinResult = channeling.CelsiusToKelvin(celsius);
@@ -178,6 +212,7 @@ namespace AstroClient48
 
                 txtKelvinResult.Text = kelvinResult.ToString("F2");
 
+                // Add the result to the history Grid
                 int rowIndex = dgvHistory.Rows.Add(
                     GetClaculateculture()[2],
                     celsius + "C",
@@ -197,22 +232,30 @@ namespace AstroClient48
 
         }
 
+        /// <summary>
+        /// Calculates the event horizon of a black hole using mass.
+        /// </summary>
+        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="e">The click event.</param>
         private void btnEventHorizon_Click(object sender, EventArgs e)
         {
             try
             {
+                // Check the input values
                 if (!double.TryParse(txtMass.Text, out double mass))
                 {
                     MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
 
+                // Send the value to the server
                 IAstroContract channeling = contract();
 
                 double horizonResult = channeling.BlackholeEventHorizon(mass);
 
                 txtEventHorizonResult.Text = horizonResult.ToString("E4");
 
+                // Add the result to the history Grid( save rowindex , Tag)
                 int rowIndex = dgvHistory.Rows.Add(
                     GetClaculateculture()[3],
                     mass + "kg",
@@ -231,6 +274,11 @@ namespace AstroClient48
             }
         }
 
+        /// <summary>
+        ///  Allows the user to change the background colour.
+        /// </summary>
+        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="e">The click event.</param>
         private void btnColor_Click(object sender, EventArgs e)
         {
             ColorDialog colorDialog = new ColorDialog();
@@ -242,6 +290,11 @@ namespace AstroClient48
             }
         }
 
+        /// <summary>
+        ///  Allows the user to change the font.
+        /// </summary>
+        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="e">The click event.</param>
         private void btnFont_Click(object sender, EventArgs e)
         {
             FontDialog fontDialog = new FontDialog();
@@ -253,7 +306,11 @@ namespace AstroClient48
             }
 
         }
-
+        /// <summary>
+        /// Applies the selected font to all controls.
+        /// </summary>
+        /// <param name="parent">The control to update.</param>
+        /// <param name="selectedFont">The font selected by the user.</param>
         private void ApplyFont(Control parent, Font selectedFont)
         { 
             parent.Font = selectedFont;
@@ -264,7 +321,11 @@ namespace AstroClient48
             }
 
         }
-
+        /// <summary>
+        /// Changes the form theme (Default, Light or Dark).
+        /// </summary>
+        /// <param name="sender">The theme combo box.</param>
+        /// <param name="e">The selected index change event.</param>
         private void cmbTheme_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -307,6 +368,11 @@ namespace AstroClient48
 
         }
 
+        /// <summary>
+        /// The user changes the language and country flag.
+        /// </summary>
+        /// <param name="sender">The language combo box.</param>
+        /// <param name="e">The selected index change event.</param>
         private void cmbLanguage_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (isChanging) return;
@@ -328,10 +394,13 @@ namespace AstroClient48
             }
 
         }
-
+        /// <summary>
+        /// Translates the form controls into the selected language.
+        /// </summary>
+        /// <param name="culture">The selected language code.</param>
         private void ChangeLanguage(string culture)
         {
-            //
+            // Prevent language change events from running again
             isChanging = true;
 
             //Save values that should not be overwritten
@@ -339,13 +408,13 @@ namespace AstroClient48
             int languageIndex = cmbLanguage.SelectedIndex;
             int themeIndex = cmbTheme.SelectedIndex;
 
-            //Apply translation
+            // Translate the form controls
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
             ComponentResourceManager resources = new ComponentResourceManager(typeof(Form1));
             resources.ApplyResources(this, "$this");
             TranslatorControls(resources, this);
 
-            //language combobox
+            // Translate combo box items and history header
             cmbLanguage.Items.Clear();         
             cmbTheme.Items.Clear();
 
@@ -380,27 +449,31 @@ namespace AstroClient48
             }
 
 
-            // Restore saved values
+            // Restore the saved values
             this.Font = font;
             cmbLanguage.SelectedIndex = languageIndex;
+            cmbTheme.SelectedIndex = themeIndex;
 
-            foreach(DataGridViewRow row in dgvHistory.Rows)
+            //Translate history Grid 
+            foreach (DataGridViewRow row in dgvHistory.Rows)
             {
                 if (row.Tag != null)
                 {
-                    int claType = (int)row.Tag;
-                    row.Cells[0].Value = GetClaculateculture()[claType];
+                    int calculateType = (int)row.Tag;
+                    row.Cells[0].Value = GetClaculateculture()[calculateType];
                 }
             }
-
-            cmbTheme.SelectedIndex = themeIndex;
-
-            //
+            // Update the server status language
             CheckServerConnection();
 
+            // Allow language change events again
             isChanging = false;
         }
 
+        /// <summary>
+        /// Gets the calculation names in the selected language.
+        /// </summary>
+        /// <returns>The translated calculation names array.</returns>
         private string[] GetClaculateculture()
         {
             
@@ -413,6 +486,10 @@ namespace AstroClient48
 
         }
 
+        /// <summary>
+        /// Gets the server status text in the selected language.
+        /// </summary>
+        /// <returns>The translated server status text array.</returns>
         private string[] GetServerStatusculture()
         {
             if (cmbLanguage.SelectedIndex == 1)
@@ -423,6 +500,10 @@ namespace AstroClient48
             return serverEN;
         }
 
+        /// <summary>
+        /// Gets the messages in the selected language.
+        /// </summary>
+        /// <returns>The translated messages array</returns>
         private string[] GetMessageculture()
         {
             if (cmbLanguage.SelectedIndex == 1)
@@ -434,7 +515,11 @@ namespace AstroClient48
         }
 
 
-
+        /// <summary>
+        /// Translates the form controls without changing the text boxes.
+        /// </summary>
+        /// <param name="resources">The language resources.</param>
+        /// <param name="parent">The control containing other controls.</param>
         private void TranslatorControls(ComponentResourceManager resources, Control parent)
         {
             foreach (Control control in parent.Controls)
@@ -449,6 +534,10 @@ namespace AstroClient48
             }
         }
 
+        /// <summary>
+        /// Checks if the WCF server is connected.
+        /// Updates the server status label.
+        /// </summary>
         private void CheckServerConnection()
         {
             try
