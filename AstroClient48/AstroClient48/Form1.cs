@@ -115,6 +115,11 @@ namespace AstroClient48
                     MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
+                if (observedWavelength <= 0 || restWavelength <= 0)
+                {
+                    MessageBox.Show(GetMessageculture()[0]);
+                    return;
+                }
 
                 // Send the values to the server
                 IAstroContract channeling = contract();
@@ -152,6 +157,11 @@ namespace AstroClient48
             {
                 // Check the input values
                 if (!double.TryParse(txtParallaxAngle.Text, out double parallaxAngle))
+                {
+                    MessageBox.Show(GetMessageculture()[0]);
+                    return;
+                }
+                if (parallaxAngle <= 0)
                 {
                     MessageBox.Show(GetMessageculture()[0]);
                     return;
@@ -251,6 +261,12 @@ namespace AstroClient48
                     MessageBox.Show(GetMessageculture()[0]);
                     return;
                 }
+                if (mass <= 0)
+                {
+                    MessageBox.Show(GetMessageculture()[0]);
+                    return;
+                }
+
 
                 // Send the value to the server
                 IAstroContract channeling = contract();
