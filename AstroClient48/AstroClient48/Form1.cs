@@ -46,6 +46,9 @@ namespace AstroClient48
         private string[] messageFR = { "Veuillez entrer une valeur valide." , "Calcul terminé avec succès." , "La température doit être supérieure à -273°C.", "La température en Kelvin doit être supérieure à zéro." ,"Erreur :"};
         private string[] messageDE = { "Bitte geben Sie einen gültigen Wert ein." ,"Berechnung erfolgreich abgeschlossen.","Die Temperatur muss größer als -273°C sein.", "Die Kelvin-Temperatur muss größer als null sein.", "Fehler: " };
 
+        //
+        private Dictionary<Control,Font> defaultFont = new Dictionary<Control,Font>();
+        
         /// <summary>
         /// Sets up the form when the program starts.
         /// </summary>
@@ -68,7 +71,8 @@ namespace AstroClient48
            // Set the history grid header color
             dgvHistory.EnableHeadersVisualStyles = false;
             dgvHistory.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
-           
+
+            SaveDefaultFont(this);
 
             CheckServerConnection();
 
@@ -140,7 +144,7 @@ namespace AstroClient48
         /// <summary>
         /// Calculates the distance to a star using the parallax angle.
         /// </summary>
-        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="sender">The button that was clicked.</param>
         /// <param name="e">The click event.</param>
         private void btnDistance_Click(object sender, EventArgs e)
         {
@@ -182,7 +186,7 @@ namespace AstroClient48
         /// <summary>
         /// Converts Celsius to Kelvin.
         /// </summary>
-        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="sender">The button that was clicked.</param>
         /// <param name="e">The click event.</param>
         private void btnTemperature_Click(object sender, EventArgs e)
         {
@@ -210,13 +214,13 @@ namespace AstroClient48
                     return;
                 }
 
-                txtKelvinResult.Text = kelvinResult.ToString("F2");
+                txtKelvinResult.Text = kelvinResult.ToString("E4");
 
                 // Add the result to the history Grid
                 int rowIndex = dgvHistory.Rows.Add(
                     GetClaculateculture()[2],
                     celsius + "C",
-                    kelvinResult.ToString("F2") + "K"
+                    kelvinResult.ToString("E4") + "K"
                     );
                 dgvHistory.Rows[rowIndex].Tag = 2;
 
@@ -235,7 +239,7 @@ namespace AstroClient48
         /// <summary>
         /// Calculates the event horizon of a black hole using mass.
         /// </summary>
-        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="sender">The button that was clicked.</param>
         /// <param name="e">The click event.</param>
         private void btnEventHorizon_Click(object sender, EventArgs e)
         {
@@ -277,7 +281,7 @@ namespace AstroClient48
         /// <summary>
         ///  Allows the user to change the background colour.
         /// </summary>
-        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="sender">The button that was clicked.</param>
         /// <param name="e">The click event.</param>
         private void btnColor_Click(object sender, EventArgs e)
         {
@@ -293,7 +297,7 @@ namespace AstroClient48
         /// <summary>
         ///  Allows the user to change the font.
         /// </summary>
-        /// /// <param name="sender">The button that was clicked.</param>
+        /// <param name="sender">The button that was clicked.</param>
         /// <param name="e">The click event.</param>
         private void btnFont_Click(object sender, EventArgs e)
         {
@@ -310,7 +314,7 @@ namespace AstroClient48
         /// Applies the selected font to all controls.
         /// </summary>
         /// <param name="parent">The control to update.</param>
-        /// <param name="selectedFont">The font selected by the user.</param>
+        /// <param name="selectedFont">The font selected by the user.</param> 
         private void ApplyFont(Control parent, Font selectedFont)
         { 
             parent.Font = selectedFont;
@@ -321,6 +325,30 @@ namespace AstroClient48
             }
 
         }
+
+        /// <summary>
+        /// Saves the original fonts of all controls.
+        /// </summary>
+        private void ResetFonts()
+        {
+            foreach (var item in defaultFont)
+            {
+                item.Key.Font = item.Value;
+            }
+        }
+
+        /// <summary>
+        /// Restores the original fonts of all controls.
+        /// </summary>
+        private void SaveDefaultFont(Control parent)
+        {
+            defaultFont[parent] = parent.Font;
+            foreach (Control control in parent.Controls)
+            {
+                SaveDefaultFont(control);
+            }
+        }
+
         /// <summary>
         /// Changes the form theme (Default, Light or Dark).
         /// </summary>
@@ -407,6 +435,7 @@ namespace AstroClient48
             Font font = this.Font;
             int languageIndex = cmbLanguage.SelectedIndex;
             int themeIndex = cmbTheme.SelectedIndex;
+            Color backgroundColor = this.BackColor;
 
             // Translate the form controls
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
@@ -453,6 +482,7 @@ namespace AstroClient48
             this.Font = font;
             cmbLanguage.SelectedIndex = languageIndex;
             cmbTheme.SelectedIndex = themeIndex;
+            this.BackColor = backgroundColor;
 
             //Translate history Grid 
             foreach (DataGridViewRow row in dgvHistory.Rows)
@@ -561,7 +591,72 @@ namespace AstroClient48
             }
                
         }
+        /// <summary>
+        /// Refreshes the server connection status.
+        /// </summary>
+        /// <param name="sender">The button that was clicked.</param>
+        /// <param name="e">The click event.</param>
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            CheckServerConnection();
+        }
+
+        /// <summary>
+        /// Resets the form settings and clears the text boxes.
+        /// </summary>
+        /// <param name="sender">The button that was clicked.</param>
+        /// <param name="e">The click event.</param>
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cmbLanguage.SelectedIndex = 0;
+            cmbTheme.SelectedIndex = 0;
+
+            this.BackColor = SystemColors.Control;
+            ResetFonts();
+
+            txtObservedWavelength.Clear();
+            txtRestWavelength.Clear();
+            txtParallaxAngle.Clear();
+            txtCelsius.Clear();
+            txtMass.Clear();
+
+            txtVelocityResult.Clear();
+            txtDistanceResult.Clear();
+            txtKelvinResult.Clear();
+            txtEventHorizonResult.Clear();
 
 
+        }
+        /// <summary>
+        /// Clears the velocity result when the input box is clicked.
+        /// </summary>
+        private void txtObservedWavelength_Click(object sender, EventArgs e)
+        {
+            txtVelocityResult.Clear();
+        }
+
+        /// <summary>
+        /// Clears the distance result when the input box is clicked.
+        /// </summary>
+        private void txtParallaxAngle_Click(object sender, EventArgs e)
+        {
+            txtDistanceResult.Clear();
+        }
+
+        /// <summary>
+        /// Clears the Kelvin result when the input box is clicked.
+        /// </summary>
+        private void txtCelsius_Click(object sender, EventArgs e)
+        {
+            txtKelvinResult.Clear();
+        }
+
+        /// <summary>
+        /// Clears the event horizon result when the input box is clicked.
+        /// </summary>
+        private void txtMass_Click(object sender, EventArgs e)
+        {
+            txtEventHorizonResult.Clear();
+        }
     }
 }

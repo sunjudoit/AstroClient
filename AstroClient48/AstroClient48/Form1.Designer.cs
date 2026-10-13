@@ -75,6 +75,8 @@ namespace AstroClient48
             this.label7 = new System.Windows.Forms.Label();
             this.panelTopMenu = new System.Windows.Forms.Panel();
             this.picFlag = new System.Windows.Forms.PictureBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.panelTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
@@ -108,8 +110,8 @@ namespace AstroClient48
             // 
             // btnVelocity
             // 
-            resources.ApplyResources(this.btnVelocity, "btnVelocity");
             this.btnVelocity.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.btnVelocity, "btnVelocity");
             this.btnVelocity.Name = "btnVelocity";
             this.btnVelocity.UseVisualStyleBackColor = false;
             this.btnVelocity.Click += new System.EventHandler(this.btnVelocity_Click);
@@ -118,6 +120,7 @@ namespace AstroClient48
             // 
             resources.ApplyResources(this.txtObservedWavelength, "txtObservedWavelength");
             this.txtObservedWavelength.Name = "txtObservedWavelength";
+            this.txtObservedWavelength.Click += new System.EventHandler(this.txtObservedWavelength_Click);
             // 
             // txtRestWavelength
             // 
@@ -148,6 +151,7 @@ namespace AstroClient48
             // 
             resources.ApplyResources(this.txtParallaxAngle, "txtParallaxAngle");
             this.txtParallaxAngle.Name = "txtParallaxAngle";
+            this.txtParallaxAngle.Click += new System.EventHandler(this.txtParallaxAngle_Click);
             // 
             // label14
             // 
@@ -158,6 +162,7 @@ namespace AstroClient48
             // 
             resources.ApplyResources(this.txtCelsius, "txtCelsius");
             this.txtCelsius.Name = "txtCelsius";
+            this.txtCelsius.Click += new System.EventHandler(this.txtCelsius_Click);
             // 
             // label15
             // 
@@ -168,27 +173,28 @@ namespace AstroClient48
             // 
             resources.ApplyResources(this.txtMass, "txtMass");
             this.txtMass.Name = "txtMass";
+            this.txtMass.Click += new System.EventHandler(this.txtMass_Click);
             // 
             // btnDistance
             // 
-            resources.ApplyResources(this.btnDistance, "btnDistance");
             this.btnDistance.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.btnDistance, "btnDistance");
             this.btnDistance.Name = "btnDistance";
             this.btnDistance.UseVisualStyleBackColor = false;
             this.btnDistance.Click += new System.EventHandler(this.btnDistance_Click);
             // 
             // btnTemperature
             // 
-            resources.ApplyResources(this.btnTemperature, "btnTemperature");
             this.btnTemperature.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.btnTemperature, "btnTemperature");
             this.btnTemperature.Name = "btnTemperature";
             this.btnTemperature.UseVisualStyleBackColor = false;
             this.btnTemperature.Click += new System.EventHandler(this.btnTemperature_Click);
             // 
             // btnEventHorizon
             // 
-            resources.ApplyResources(this.btnEventHorizon, "btnEventHorizon");
             this.btnEventHorizon.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.btnEventHorizon, "btnEventHorizon");
             this.btnEventHorizon.Name = "btnEventHorizon";
             this.btnEventHorizon.UseVisualStyleBackColor = false;
             this.btnEventHorizon.Click += new System.EventHandler(this.btnEventHorizon_Click);
@@ -230,8 +236,8 @@ namespace AstroClient48
             // 
             // dgvHistory
             // 
-            resources.ApplyResources(this.dgvHistory, "dgvHistory");
             this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvHistory, "dgvHistory");
             this.dgvHistory.Name = "dgvHistory";
             // 
             // lblError
@@ -241,62 +247,62 @@ namespace AstroClient48
             // 
             // cmbLanguage
             // 
-            resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.FormattingEnabled = true;
             this.cmbLanguage.Items.AddRange(new object[] {
             resources.GetString("cmbLanguage.Items"),
             resources.GetString("cmbLanguage.Items1"),
             resources.GetString("cmbLanguage.Items2")});
+            resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.Name = "cmbLanguage";
             this.cmbLanguage.SelectedIndexChanged += new System.EventHandler(this.cmbLanguage_SelectedIndexChanged_1);
             // 
             // cmbTheme
             // 
-            resources.ApplyResources(this.cmbTheme, "cmbTheme");
             this.cmbTheme.FormattingEnabled = true;
             this.cmbTheme.Items.AddRange(new object[] {
             resources.GetString("cmbTheme.Items"),
             resources.GetString("cmbTheme.Items1"),
             resources.GetString("cmbTheme.Items2")});
+            resources.ApplyResources(this.cmbTheme, "cmbTheme");
             this.cmbTheme.Name = "cmbTheme";
             this.cmbTheme.SelectedIndexChanged += new System.EventHandler(this.cmbTheme_SelectedIndexChanged);
             // 
             // label2
             // 
-            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
             // label3
             // 
-            resources.ApplyResources(this.label3, "label3");
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
             // label4
             // 
-            resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
             // label5
             // 
-            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
             // btnColor
             // 
-            resources.ApplyResources(this.btnColor, "btnColor");
             this.btnColor.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.btnColor, "btnColor");
             this.btnColor.Name = "btnColor";
             this.btnColor.UseVisualStyleBackColor = false;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnFont
             // 
-            resources.ApplyResources(this.btnFont, "btnFont");
             this.btnFont.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.btnFont, "btnFont");
             this.btnFont.Name = "btnFont";
             this.btnFont.UseVisualStyleBackColor = false;
             this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
@@ -308,13 +314,12 @@ namespace AstroClient48
             // 
             // label7
             // 
-            resources.ApplyResources(this.label7, "label7");
             this.label7.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
             // panelTopMenu
             // 
-            resources.ApplyResources(this.panelTopMenu, "panelTopMenu");
             this.panelTopMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panelTopMenu.Controls.Add(this.picFlag);
             this.panelTopMenu.Controls.Add(this.btnFont);
@@ -325,19 +330,36 @@ namespace AstroClient48
             this.panelTopMenu.Controls.Add(this.label2);
             this.panelTopMenu.Controls.Add(this.cmbTheme);
             this.panelTopMenu.Controls.Add(this.cmbLanguage);
+            resources.ApplyResources(this.panelTopMenu, "panelTopMenu");
             this.panelTopMenu.Name = "panelTopMenu";
             // 
             // picFlag
             // 
-            resources.ApplyResources(this.picFlag, "picFlag");
             this.picFlag.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.picFlag, "picFlag");
             this.picFlag.Name = "picFlag";
             this.picFlag.TabStop = false;
             // 
+            // btnRefresh
+            // 
+            resources.ApplyResources(this.btnRefresh, "btnRefresh");
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnReset
+            // 
+            resources.ApplyResources(this.btnReset, "btnReset");
+            this.btnReset.Name = "btnReset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.panelTopMenu);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblServerStatus);
@@ -424,5 +446,7 @@ namespace AstroClient48
         private Label lblServerStatus;
         private Label label7;
         private Panel panelTopMenu;
+        private Button btnRefresh;
+        private Button btnReset;
     }
 }
